@@ -1,9 +1,9 @@
 <?xml version="1.0" ?>
-<robot name="frame" xmlns:xacro="http://www.ros.org/wiki/xacro">
+<robot name="drone_frame" xmlns:xacro="http://www.ros.org/wiki/xacro">
 
-<xacro:include filename="$(find frame_description)/urdf/materials.xacro" />
-<xacro:include filename="$(find frame_description)/urdf/frame.ros2control" />
-<xacro:include filename="$(find frame_description)/urdf/frame.gazebo" />
+<xacro:include filename="$(find drone_frame_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find drone_frame_description)/urdf/drone_frame.ros2control" />
+<xacro:include filename="$(find drone_frame_description)/urdf/drone_frame.gazebo" />
 <link name="base_link">
   <inertial>
     <origin xyz="5.361940941515797e-15 -0.006931498212032427 1.0942736615338362e-16" rpy="0 0 0"/>
@@ -13,14 +13,14 @@
   <visual>
     <origin xyz="0 0 0" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find frame_description)/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find drone_frame_description)/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin xyz="0 0 0" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find frame_description)/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find drone_frame_description)/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -34,14 +34,14 @@
   <visual>
     <origin xyz="0.055 -0.02 0.2" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find frame_description)/meshes/arm_7_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find drone_frame_description)/meshes/arm_7_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin xyz="0.055 -0.02 0.2" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find frame_description)/meshes/arm_7_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find drone_frame_description)/meshes/arm_7_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -55,35 +55,35 @@
   <visual>
     <origin xyz="0.2 -0.02 0.055" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find frame_description)/meshes/arm_8_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find drone_frame_description)/meshes/arm_8_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin xyz="0.2 -0.02 0.055" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find frame_description)/meshes/arm_8_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find drone_frame_description)/meshes/arm_8_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
 
 <link name="arm_6_1">
   <inertial>
-    <origin xyz="0.0973299825380552 2.5274376341810623e-11 0.08302889455495804" rpy="0 0 0"/>
+    <origin xyz="0.09732998253805486 2.5274376341810623e-11 0.08302889455495802" rpy="0 0 0"/>
     <mass value="0.15422742956922936"/>
     <inertia ixx="0.0006" iyy="0.000929" izz="0.000389" ixy="-0.0" iyz="-0.0" ixz="-0.000277"/>
   </inertial>
   <visual>
     <origin xyz="-0.2 -0.02 -0.055" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find frame_description)/meshes/arm_6_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find drone_frame_description)/meshes/arm_6_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin xyz="-0.2 -0.02 -0.055" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find frame_description)/meshes/arm_6_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find drone_frame_description)/meshes/arm_6_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -97,14 +97,14 @@
   <visual>
     <origin xyz="-0.055 -0.02 -0.2" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find frame_description)/meshes/arm_5_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find drone_frame_description)/meshes/arm_5_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin xyz="-0.055 -0.02 -0.2" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find frame_description)/meshes/arm_5_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find drone_frame_description)/meshes/arm_5_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -118,14 +118,14 @@
   <visual>
     <origin xyz="-0.2 -0.02 0.055" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find frame_description)/meshes/arm_4_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find drone_frame_description)/meshes/arm_4_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin xyz="-0.2 -0.02 0.055" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find frame_description)/meshes/arm_4_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find drone_frame_description)/meshes/arm_4_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -139,182 +139,182 @@
   <visual>
     <origin xyz="-0.055 -0.02 0.2" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find frame_description)/meshes/arm_3_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find drone_frame_description)/meshes/arm_3_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin xyz="-0.055 -0.02 0.2" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find frame_description)/meshes/arm_3_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find drone_frame_description)/meshes/arm_3_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
 
 <link name="arm_2_1">
   <inertial>
-    <origin xyz="-0.09732998253804703 -2.5274383280704527e-11 0.08302889455496792" rpy="0 0 0"/>
+    <origin xyz="-0.09732998253804709 -2.5269421971563233e-11 0.08302889455496792" rpy="0 0 0"/>
     <mass value="0.15422742956922936"/>
     <inertia ixx="0.0006" iyy="0.000929" izz="0.000389" ixy="-0.0" iyz="0.0" ixz="0.000277"/>
   </inertial>
   <visual>
     <origin xyz="0.2 -0.02 -0.055" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find frame_description)/meshes/arm_2_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find drone_frame_description)/meshes/arm_2_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin xyz="0.2 -0.02 -0.055" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find frame_description)/meshes/arm_2_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find drone_frame_description)/meshes/arm_2_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
 
 <link name="arm_1_1">
   <inertial>
-    <origin xyz="-0.08302889455495796 2.5278522330918207e-11 0.09732998253805508" rpy="0 0 0"/>
+    <origin xyz="-0.08302889455495796 2.5278622944879814e-11 0.0973299825380552" rpy="0 0 0"/>
     <mass value="0.15422742956922936"/>
     <inertia ixx="0.000389" iyy="0.000929" izz="0.0006" ixy="0.0" iyz="-0.0" ixz="0.000277"/>
   </inertial>
   <visual>
     <origin xyz="0.055 -0.02 -0.2" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find frame_description)/meshes/arm_1_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find drone_frame_description)/meshes/arm_1_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin xyz="0.055 -0.02 -0.2" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find frame_description)/meshes/arm_1_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find drone_frame_description)/meshes/arm_1_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
 
 <link name="holder_4_1">
   <inertial>
-    <origin xyz="0.0012743502456399602 -1.933707013956898e-11 -0.016274350245639946" rpy="0 0 0"/>
+    <origin xyz="0.0012743502456467604 -1.6835240493340287e-10 -0.0162743502456395" rpy="0 0 0"/>
     <mass value="0.545696208866394"/>
-    <inertia ixx="0.00016" iyy="0.000161" izz="0.00016" ixy="-0.0" iyz="0.0" ixz="-1e-06"/>
+    <inertia ixx="0.00016" iyy="0.000161" izz="0.00016" ixy="-0.0" iyz="-0.0" ixz="-1e-06"/>
   </inertial>
   <visual>
     <origin xyz="0.2 -0.02 -0.215" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find frame_description)/meshes/holder_4_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find drone_frame_description)/meshes/holder_4_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin xyz="0.2 -0.02 -0.215" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find frame_description)/meshes/holder_4_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find drone_frame_description)/meshes/holder_4_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
 
 <link name="holder_4_1">
   <inertial>
-    <origin xyz="0.016274350245639946 -1.933707013956898e-11 -0.0012743502456399602" rpy="0 0 0"/>
+    <origin xyz="0.016274350245646746 -1.6835240493340287e-10 -0.0012743502456395162" rpy="0 0 0"/>
     <mass value="0.545696208866394"/>
-    <inertia ixx="0.00016" iyy="0.000161" izz="0.00016" ixy="-0.0" iyz="0.0" ixz="-1e-06"/>
+    <inertia ixx="0.00016" iyy="0.000161" izz="0.00016" ixy="-0.0" iyz="-0.0" ixz="-1e-06"/>
   </inertial>
   <visual>
     <origin xyz="0.215 -0.02 -0.2" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find frame_description)/meshes/holder_4_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find drone_frame_description)/meshes/holder_4_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin xyz="0.215 -0.02 -0.2" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find frame_description)/meshes/holder_4_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find drone_frame_description)/meshes/holder_4_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
 
 <link name="holder_3_1">
   <inertial>
-    <origin xyz="0.01627435024563989 3.173676564605099e-10 0.0012743502456399047" rpy="0 0 0"/>
+    <origin xyz="0.016274350245639946 1.6835604438325547e-10 0.0012743502456399047" rpy="0 0 0"/>
     <mass value="0.545696208866394"/>
-    <inertia ixx="0.00016" iyy="0.000161" izz="0.00016" ixy="0.0" iyz="0.0" ixz="1e-06"/>
+    <inertia ixx="0.00016" iyy="0.000161" izz="0.00016" ixy="0.0" iyz="-0.0" ixz="1e-06"/>
   </inertial>
   <visual>
     <origin xyz="0.215 -0.02 0.2" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find frame_description)/meshes/holder_3_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find drone_frame_description)/meshes/holder_3_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin xyz="0.215 -0.02 0.2" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find frame_description)/meshes/holder_3_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find drone_frame_description)/meshes/holder_3_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
 
 <link name="holder_3_1">
   <inertial>
-    <origin xyz="0.0012743502456399047 3.173676564605099e-10 0.01627435024563989" rpy="0 0 0"/>
+    <origin xyz="0.0012743502456399602 1.6835604438325547e-10 0.01627435024563989" rpy="0 0 0"/>
     <mass value="0.545696208866394"/>
-    <inertia ixx="0.00016" iyy="0.000161" izz="0.00016" ixy="0.0" iyz="0.0" ixz="1e-06"/>
+    <inertia ixx="0.00016" iyy="0.000161" izz="0.00016" ixy="0.0" iyz="-0.0" ixz="1e-06"/>
   </inertial>
   <visual>
     <origin xyz="0.2 -0.02 0.215" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find frame_description)/meshes/holder_3_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find drone_frame_description)/meshes/holder_3_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin xyz="0.2 -0.02 0.215" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find frame_description)/meshes/holder_3_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find drone_frame_description)/meshes/holder_3_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
 
 <link name="holder_2_1">
   <inertial>
-    <origin xyz="-0.0012743502456399047 -1.9344432306001025e-11 0.01627435024563989" rpy="0 0 0"/>
+    <origin xyz="-0.0012743502456399047 -1.6835604785270242e-10 0.016274350245639946" rpy="0 0 0"/>
     <mass value="0.545696208866394"/>
-    <inertia ixx="0.00016" iyy="0.000161" izz="0.00016" ixy="0.0" iyz="-0.0" ixz="-1e-06"/>
+    <inertia ixx="0.00016" iyy="0.000161" izz="0.00016" ixy="0.0" iyz="0.0" ixz="-1e-06"/>
   </inertial>
   <visual>
     <origin xyz="-0.2 -0.02 0.215" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find frame_description)/meshes/holder_2_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find drone_frame_description)/meshes/holder_2_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin xyz="-0.2 -0.02 0.215" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find frame_description)/meshes/holder_2_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find drone_frame_description)/meshes/holder_2_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
 
 <link name="holder_2_1">
   <inertial>
-    <origin xyz="-0.01627435024563989 -1.9344432306001025e-11 0.0012743502456399047" rpy="0 0 0"/>
+    <origin xyz="-0.01627435024563989 -1.6835604785270242e-10 0.0012743502456399602" rpy="0 0 0"/>
     <mass value="0.545696208866394"/>
-    <inertia ixx="0.00016" iyy="0.000161" izz="0.00016" ixy="0.0" iyz="-0.0" ixz="-1e-06"/>
+    <inertia ixx="0.00016" iyy="0.000161" izz="0.00016" ixy="0.0" iyz="0.0" ixz="-1e-06"/>
   </inertial>
   <visual>
     <origin xyz="-0.215 -0.02 0.2" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find frame_description)/meshes/holder_2_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find drone_frame_description)/meshes/holder_2_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin xyz="-0.215 -0.02 0.2" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find frame_description)/meshes/holder_2_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find drone_frame_description)/meshes/holder_2_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -328,14 +328,14 @@
   <visual>
     <origin xyz="-0.215 -0.02 -0.2" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find frame_description)/meshes/holder_1_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find drone_frame_description)/meshes/holder_1_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin xyz="-0.215 -0.02 -0.2" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find frame_description)/meshes/holder_1_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find drone_frame_description)/meshes/holder_1_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -349,14 +349,14 @@
   <visual>
     <origin xyz="-0.2 -0.02 -0.215" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find frame_description)/meshes/holder_1_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find drone_frame_description)/meshes/holder_1_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin xyz="-0.2 -0.02 -0.215" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find frame_description)/meshes/holder_1_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find drone_frame_description)/meshes/holder_1_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -370,140 +370,140 @@
   <visual>
     <origin xyz="-0.2 -0.04 -0.2" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find frame_description)/meshes/bldc_8_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find drone_frame_description)/meshes/bldc_8_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin xyz="-0.2 -0.04 -0.2" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find frame_description)/meshes/bldc_8_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find drone_frame_description)/meshes/bldc_8_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
 
 <link name="bldc_7_1">
   <inertial>
-    <origin xyz="2.6989159021245657e-05 0.012072048037909955 9.851740487398786e-06" rpy="0 0 0"/>
+    <origin xyz="2.6989477628441838e-05 0.012072047888532327 9.8520590945117e-06" rpy="0 0 0"/>
     <mass value="0.22635455509580502"/>
     <inertia ixx="6.6e-05" iyy="0.000112" izz="6.6e-05" ixy="-0.0" iyz="-0.0" ixz="-0.0"/>
   </inertial>
   <visual>
     <origin xyz="-0.2 -0.04 0.2" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find frame_description)/meshes/bldc_7_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find drone_frame_description)/meshes/bldc_7_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin xyz="-0.2 -0.04 0.2" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find frame_description)/meshes/bldc_7_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find drone_frame_description)/meshes/bldc_7_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
 
 <link name="bldc_6_1">
   <inertial>
-    <origin xyz="2.6989159021273412e-05 0.012072048335933179 9.851740487398786e-06" rpy="0 0 0"/>
+    <origin xyz="2.6989477628469594e-05 0.01207204818675131 9.851421880202604e-06" rpy="0 0 0"/>
     <mass value="0.22635455509580502"/>
     <inertia ixx="6.6e-05" iyy="0.000112" izz="6.6e-05" ixy="-0.0" iyz="-0.0" ixz="-0.0"/>
   </inertial>
   <visual>
     <origin xyz="0.2 -0.04 0.2" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find frame_description)/meshes/bldc_6_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find drone_frame_description)/meshes/bldc_6_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin xyz="0.2 -0.04 0.2" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find frame_description)/meshes/bldc_6_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find drone_frame_description)/meshes/bldc_6_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
 
 <link name="bldc_5_1">
   <inertial>
-    <origin xyz="-2.6989159019580322e-05 0.01207204803791747 -9.851740487953897e-06" rpy="0 0 0"/>
+    <origin xyz="-2.698947762899695e-05 0.012072047888536115 -9.852059102616328e-06" rpy="0 0 0"/>
     <mass value="0.22635455509580502"/>
     <inertia ixx="6.6e-05" iyy="0.000112" izz="6.6e-05" ixy="0.0" iyz="0.0" ixz="-0.0"/>
   </inertial>
   <visual>
     <origin xyz="0.2 -0.04 -0.2" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find frame_description)/meshes/bldc_5_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find drone_frame_description)/meshes/bldc_5_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin xyz="0.2 -0.04 -0.2" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find frame_description)/meshes/bldc_5_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find drone_frame_description)/meshes/bldc_5_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
 
 <link name="bldc_4_1">
   <inertial>
-    <origin xyz="-2.6989159021273412e-05 -0.012072048037909955 9.851740487398786e-06" rpy="0 0 0"/>
+    <origin xyz="-2.6989477628414082e-05 -0.012072048186751306 9.851421880202604e-06" rpy="0 0 0"/>
     <mass value="0.22635455509580502"/>
     <inertia ixx="6.6e-05" iyy="0.000112" izz="6.6e-05" ixy="-0.0" iyz="0.0" ixz="0.0"/>
   </inertial>
   <visual>
-    <origin xyz="-0.2 -0.0 0.2" rpy="0 0 0"/>
+    <origin xyz="-0.2 0.0 0.2" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find frame_description)/meshes/bldc_4_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find drone_frame_description)/meshes/bldc_4_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
-    <origin xyz="-0.2 -0.0 0.2" rpy="0 0 0"/>
+    <origin xyz="-0.2 0.0 0.2" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find frame_description)/meshes/bldc_4_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find drone_frame_description)/meshes/bldc_4_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
 
 <link name="bldc_3_1">
   <inertial>
-    <origin xyz="-2.6989159021245657e-05 -0.01207204773988673 9.851740487398786e-06" rpy="0 0 0"/>
+    <origin xyz="-2.6989477628414082e-05 -0.012072047888532344 9.8520590945117e-06" rpy="0 0 0"/>
     <mass value="0.22635455509580502"/>
     <inertia ixx="6.6e-05" iyy="0.000112" izz="6.6e-05" ixy="-0.0" iyz="0.0" ixz="0.0"/>
   </inertial>
   <visual>
     <origin xyz="0.2 -0.0 0.2" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find frame_description)/meshes/bldc_3_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find drone_frame_description)/meshes/bldc_3_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin xyz="0.2 -0.0 0.2" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find frame_description)/meshes/bldc_3_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find drone_frame_description)/meshes/bldc_3_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
 
 <link name="bldc_2_1">
   <inertial>
-    <origin xyz="2.6989159019635833e-05 -0.012072048037902619 -9.851740487953897e-06" rpy="0 0 0"/>
+    <origin xyz="2.698947764109838e-05 -0.012072048186747673 -9.85142187226451e-06" rpy="0 0 0"/>
     <mass value="0.22635455509580502"/>
     <inertia ixx="6.6e-05" iyy="0.000112" izz="6.6e-05" ixy="0.0" iyz="-0.0" ixz="0.0"/>
   </inertial>
   <visual>
-    <origin xyz="0.2 -0.0 -0.2" rpy="0 0 0"/>
+    <origin xyz="0.2 0.0 -0.2" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find frame_description)/meshes/bldc_2_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find drone_frame_description)/meshes/bldc_2_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
-    <origin xyz="0.2 -0.0 -0.2" rpy="0 0 0"/>
+    <origin xyz="0.2 0.0 -0.2" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find frame_description)/meshes/bldc_2_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find drone_frame_description)/meshes/bldc_2_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -517,14 +517,14 @@
   <visual>
     <origin xyz="-0.2 0.0 -0.2" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find frame_description)/meshes/bldc_1_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find drone_frame_description)/meshes/bldc_1_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin xyz="-0.2 0.0 -0.2" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find frame_description)/meshes/bldc_1_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find drone_frame_description)/meshes/bldc_1_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -538,14 +538,14 @@
   <visual>
     <origin xyz="0.0 -0.04 -0.15" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find frame_description)/meshes/controller_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find drone_frame_description)/meshes/controller_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin xyz="0.0 -0.04 -0.15" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find frame_description)/meshes/controller_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find drone_frame_description)/meshes/controller_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -559,14 +559,14 @@
   <visual>
     <origin xyz="0.055 -0.04 -0.2" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find frame_description)/meshes/wifi_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find drone_frame_description)/meshes/wifi_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin xyz="0.055 -0.04 -0.2" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find frame_description)/meshes/wifi_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find drone_frame_description)/meshes/wifi_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -580,14 +580,14 @@
   <visual>
     <origin xyz="0.0 -0.0 -0.15" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find frame_description)/meshes/camera_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find drone_frame_description)/meshes/camera_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin xyz="0.0 -0.0 -0.15" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find frame_description)/meshes/camera_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find drone_frame_description)/meshes/camera_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -601,14 +601,14 @@
   <visual>
     <origin xyz="-0.0 -0.04 -0.0" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find frame_description)/meshes/battery_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find drone_frame_description)/meshes/battery_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin xyz="-0.0 -0.04 -0.0" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find frame_description)/meshes/battery_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find drone_frame_description)/meshes/battery_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -622,77 +622,77 @@
   <visual>
     <origin xyz="-0.2 -0.066 -0.2" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find frame_description)/meshes/prop_8_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find drone_frame_description)/meshes/prop_8_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin xyz="-0.2 -0.066 -0.2" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find frame_description)/meshes/prop_8_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find drone_frame_description)/meshes/prop_8_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
 
 <link name="prop_7_1">
   <inertial>
-    <origin xyz="9.956764301932708e-10 0.001401642724294494 5.655541951421483e-09" rpy="0 0 0"/>
+    <origin xyz="5.247765000326865e-10 0.0014016425752792078 5.1846385240583714e-09" rpy="0 0 0"/>
     <mass value="0.0335765475239113"/>
-    <inertia ixx="0.00011" iyy="0.000111" izz="1e-06" ixy="0.0" iyz="0.0" ixz="-1e-06"/>
+    <inertia ixx="0.00011" iyy="0.000111" izz="1e-06" ixy="0.0" iyz="-0.0" ixz="-1e-06"/>
   </inertial>
   <visual>
     <origin xyz="0.2 -0.066 -0.2" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find frame_description)/meshes/prop_7_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find drone_frame_description)/meshes/prop_7_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin xyz="0.2 -0.066 -0.2" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find frame_description)/meshes/prop_7_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find drone_frame_description)/meshes/prop_7_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
 
 <link name="prop_6_1">
   <inertial>
-    <origin xyz="-9.956739044358898e-10 0.0014016430223102033 -5.65554336695584e-09" rpy="0 0 0"/>
+    <origin xyz="-5.247808854136338e-10 0.0014016428732985392 -6.126436385978096e-09" rpy="0 0 0"/>
     <mass value="0.0335765475239113"/>
     <inertia ixx="0.00011" iyy="0.000111" izz="1e-06" ixy="-0.0" iyz="-0.0" ixz="-1e-06"/>
   </inertial>
   <visual>
     <origin xyz="0.2 -0.066 0.2" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find frame_description)/meshes/prop_6_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find drone_frame_description)/meshes/prop_6_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin xyz="0.2 -0.066 0.2" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find frame_description)/meshes/prop_6_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find drone_frame_description)/meshes/prop_6_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
 
 <link name="prop_5_1">
   <inertial>
-    <origin xyz="-9.956739321914654e-10 0.001401642724286986 -5.655543339200264e-09" rpy="0 0 0"/>
+    <origin xyz="-5.247809131692094e-10 0.0014016425752753914 -5.184650347933584e-09" rpy="0 0 0"/>
     <mass value="0.0335765475239113"/>
-    <inertia ixx="0.00011" iyy="0.000111" izz="1e-06" ixy="-0.0" iyz="-0.0" ixz="-1e-06"/>
+    <inertia ixx="0.00011" iyy="0.000111" izz="1e-06" ixy="-0.0" iyz="0.0" ixz="-1e-06"/>
   </inertial>
   <visual>
     <origin xyz="-0.2 -0.066 0.2" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find frame_description)/meshes/prop_5_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find drone_frame_description)/meshes/prop_5_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin xyz="-0.2 -0.066 0.2" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find frame_description)/meshes/prop_5_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find drone_frame_description)/meshes/prop_5_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -706,14 +706,14 @@
   <visual>
     <origin xyz="-0.2 0.026 0.2" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find frame_description)/meshes/prop_4_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find drone_frame_description)/meshes/prop_4_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin xyz="-0.2 0.026 0.2" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find frame_description)/meshes/prop_4_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find drone_frame_description)/meshes/prop_4_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -727,14 +727,14 @@
   <visual>
     <origin xyz="-0.2 0.026 -0.2" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find frame_description)/meshes/prop_3_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find drone_frame_description)/meshes/prop_3_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin xyz="-0.2 0.026 -0.2" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find frame_description)/meshes/prop_3_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find drone_frame_description)/meshes/prop_3_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -748,14 +748,14 @@
   <visual>
     <origin xyz="0.2 0.026 0.2" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find frame_description)/meshes/prop_2_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find drone_frame_description)/meshes/prop_2_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin xyz="0.2 0.026 0.2" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find frame_description)/meshes/prop_2_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find drone_frame_description)/meshes/prop_2_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -769,14 +769,14 @@
   <visual>
     <origin xyz="0.2 0.026 -0.2" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find frame_description)/meshes/prop_1_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find drone_frame_description)/meshes/prop_1_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin xyz="0.2 0.026 -0.2" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find frame_description)/meshes/prop_1_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find drone_frame_description)/meshes/prop_1_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -790,14 +790,14 @@
   <visual>
     <origin xyz="0.055 -0.04 0.2" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find frame_description)/meshes/gps_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find drone_frame_description)/meshes/gps_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin xyz="0.055 -0.04 0.2" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find frame_description)/meshes/gps_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find drone_frame_description)/meshes/gps_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -811,72 +811,80 @@
   <visual>
     <origin xyz="0.0 -0.02 -0.15" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find frame_description)/meshes/probe_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find drone_frame_description)/meshes/probe_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin xyz="0.0 -0.02 -0.15" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find frame_description)/meshes/probe_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find drone_frame_description)/meshes/probe_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
 
-<joint name="Revolute 1" type="continuous">
+<joint name="Revolute 1" type="revolute">
   <origin xyz="-0.055 0.02 -0.2" rpy="0 0 0"/>
   <parent link="base_link"/>
   <child link="arm_7_1"/>
   <axis xyz="1.0 0.0 0.0"/>
+  <limit upper="1.570796" lower="-1.570796" effort="100" velocity="100"/>
 </joint>
 
-<joint name="Revolute 2" type="continuous">
+<joint name="Revolute 2" type="revolute">
   <origin xyz="-0.2 0.02 -0.055" rpy="0 0 0"/>
   <parent link="base_link"/>
   <child link="arm_8_1"/>
   <axis xyz="0.0 0.0 1.0"/>
+  <limit upper="1.570796" lower="-1.570796" effort="100" velocity="100"/>
 </joint>
 
-<joint name="Revolute 3" type="continuous">
+<joint name="Revolute 3" type="revolute">
   <origin xyz="0.2 0.02 0.055" rpy="0 0 0"/>
   <parent link="base_link"/>
   <child link="arm_6_1"/>
   <axis xyz="0.0 0.0 1.0"/>
+  <limit upper="1.570796" lower="-1.570796" effort="100" velocity="100"/>
 </joint>
 
-<joint name="Revolute 4" type="continuous">
+<joint name="Revolute 4" type="revolute">
   <origin xyz="0.055 0.02 0.2" rpy="0 0 0"/>
   <parent link="base_link"/>
   <child link="arm_5_1"/>
   <axis xyz="1.0 0.0 0.0"/>
+  <limit upper="1.570796" lower="-1.570796" effort="100" velocity="100"/>
 </joint>
 
-<joint name="Revolute 5" type="continuous">
+<joint name="Revolute 5" type="revolute">
   <origin xyz="0.2 0.02 -0.055" rpy="0 0 0"/>
   <parent link="base_link"/>
   <child link="arm_4_1"/>
   <axis xyz="0.0 0.0 1.0"/>
+  <limit upper="1.570796" lower="-1.570796" effort="100" velocity="100"/>
 </joint>
 
-<joint name="Revolute 6" type="continuous">
+<joint name="Revolute 6" type="revolute">
   <origin xyz="0.055 0.02 -0.2" rpy="0 0 0"/>
   <parent link="base_link"/>
   <child link="arm_3_1"/>
   <axis xyz="1.0 0.0 0.0"/>
+  <limit upper="1.570796" lower="-1.570796" effort="100" velocity="100"/>
 </joint>
 
-<joint name="Revolute 7" type="continuous">
+<joint name="Revolute 7" type="revolute">
   <origin xyz="-0.2 0.02 0.055" rpy="0 0 0"/>
   <parent link="base_link"/>
   <child link="arm_2_1"/>
   <axis xyz="0.0 0.0 1.0"/>
+  <limit upper="1.570796" lower="-1.570796" effort="100" velocity="100"/>
 </joint>
 
-<joint name="Revolute 8" type="continuous">
+<joint name="Revolute 8" type="revolute">
   <origin xyz="-0.055 0.02 0.2" rpy="0 0 0"/>
   <parent link="base_link"/>
   <child link="arm_1_1"/>
   <axis xyz="1.0 0.0 0.0"/>
+  <limit upper="1.570796" lower="-1.570796" effort="100" velocity="100"/>
 </joint>
 
 <joint name="Revolute 13" type="continuous">
@@ -890,7 +898,7 @@
   <origin xyz="-0.015 0.0 0.145" rpy="0 0 0"/>
   <parent link="arm_2_1"/>
   <child link="holder_4_1"/>
-  <axis xyz="1.0 0.0 -0.0"/>
+  <axis xyz="1.0 -0.0 -0.0"/>
 </joint>
 
 <joint name="Revolute 15" type="continuous">
@@ -925,7 +933,7 @@
   <origin xyz="0.0 0.0 0.16" rpy="0 0 0"/>
   <parent link="arm_6_1"/>
   <child link="holder_1_1"/>
-  <axis xyz="-1.0 0.0 0.0"/>
+  <axis xyz="-1.0 -0.0 -0.0"/>
 </joint>
 
 <joint name="Revolute 20" type="continuous">
@@ -1018,28 +1026,28 @@
   <origin xyz="0.0 0.026 0.0" rpy="0 0 0"/>
   <parent link="bldc_5_1"/>
   <child link="prop_7_1"/>
-  <axis xyz="-0.0 -1.0 0.0"/>
+  <axis xyz="0.0 -1.0 0.0"/>
 </joint>
 
 <joint name="Revolute 35" type="continuous">
   <origin xyz="0.0 0.026 0.0" rpy="0 0 0"/>
   <parent link="bldc_6_1"/>
   <child link="prop_6_1"/>
-  <axis xyz="0.0 -1.0 -0.0"/>
+  <axis xyz="-0.0 -1.0 0.0"/>
 </joint>
 
 <joint name="Revolute 36" type="continuous">
   <origin xyz="0.0 0.026 0.0" rpy="0 0 0"/>
   <parent link="bldc_7_1"/>
   <child link="prop_5_1"/>
-  <axis xyz="0.0 -1.0 -0.0"/>
+  <axis xyz="-0.0 -1.0 -0.0"/>
 </joint>
 
 <joint name="Revolute 37" type="continuous">
   <origin xyz="0.0 -0.026 0.0" rpy="0 0 0"/>
   <parent link="bldc_4_1"/>
   <child link="prop_4_1"/>
-  <axis xyz="-0.0 1.0 -0.0"/>
+  <axis xyz="0.0 1.0 0.0"/>
 </joint>
 
 <joint name="Revolute 38" type="continuous">
@@ -1053,14 +1061,14 @@
   <origin xyz="0.0 -0.026 0.0" rpy="0 0 0"/>
   <parent link="bldc_3_1"/>
   <child link="prop_2_1"/>
-  <axis xyz="-0.0 1.0 -0.0"/>
+  <axis xyz="0.0 1.0 -0.0"/>
 </joint>
 
 <joint name="Revolute 40" type="continuous">
   <origin xyz="0.0 -0.026 0.0" rpy="0 0 0"/>
   <parent link="bldc_2_1"/>
   <child link="prop_1_1"/>
-  <axis xyz="0.0 1.0 0.0"/>
+  <axis xyz="-0.0 1.0 -0.0"/>
 </joint>
 
 <joint name="Rigid 41" type="fixed">

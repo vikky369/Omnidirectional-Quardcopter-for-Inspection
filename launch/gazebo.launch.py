@@ -15,10 +15,10 @@ def generate_launch_description():
 
     # Package Directories
     pkg_ros_gz_sim = get_package_share_directory('ros_gz_sim')
-    pkg_ros_gz_rbot = get_package_share_directory('frame_description')
+    pkg_ros_gz_rbot = get_package_share_directory('drone_frame_description')
 
     # Parse robot description from xacro
-    robot_description_file = os.path.join(pkg_ros_gz_rbot, 'urdf', 'frame.xacro')
+    robot_description_file = os.path.join(pkg_ros_gz_rbot, 'urdf', 'drone_frame.xacro')
     ros_gz_bridge_config = os.path.join(pkg_ros_gz_rbot, 'config', 'ros_gz_bridge_gazebo.yaml')
     
     robot_description_config = xacro.process_file(
@@ -49,7 +49,7 @@ def generate_launch_description():
         executable='create',
         arguments=[
             "-topic", "/robot_description",
-            "-name", "frame",
+            "-name", "drone_frame",
             "-allow_renaming", "true",
             "-z", "0.32",
             "-x", "0.0",

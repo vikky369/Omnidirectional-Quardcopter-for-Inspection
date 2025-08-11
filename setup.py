@@ -2,7 +2,7 @@ from setuptools import setup
 import os
 from glob import glob
 
-package_name = 'frame_description'
+package_name = 'drone_frame_description'
 
 setup(
     name=package_name,
