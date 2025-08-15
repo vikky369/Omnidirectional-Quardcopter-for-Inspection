@@ -532,8 +532,8 @@
 <link name="prop_8_1">
   <inertial>
     <origin xyz="5.65554336695584e-09 0.0014016427242870277 -9.956738766803142e-10" rpy="0 0 0"/>
-    <mass value="0.0335765475239113"/>
-    <inertia ixx="1e-06" iyy="0.000111" izz="0.00011" ixy="0.0" iyz="-0.0" ixz="1e-06"/>
+    <mass value="0.035"/>
+    <inertia ixx="0.00000146" iyy="0.000189" izz="0.000188" ixy="0.0" iyz="0.0" ixz="0.0"/>
   </inertial>
   <visual>
     <origin xyz="-0.2 -0.066 -0.2" rpy="0 0 0"/>
@@ -553,8 +553,8 @@
 <link name="prop_7_1">
   <inertial>
     <origin xyz="9.956764301932708e-10 0.001401642724294494 5.655541951421483e-09" rpy="0 0 0"/>
-    <mass value="0.0335765475239113"/>
-    <inertia ixx="0.00011" iyy="0.000111" izz="1e-06" ixy="0.0" iyz="0.0" ixz="-1e-06"/>
+    <mass value="0.035"/>
+    <inertia ixx="0.00000146" iyy="0.000189" izz="0.000188" ixy="0.0" iyz="0.0" ixz="0.0"/>
   </inertial>
   <visual>
     <origin xyz="0.2 -0.066 -0.2" rpy="0 0 0"/>
@@ -574,8 +574,8 @@
 <link name="prop_6_1">
   <inertial>
     <origin xyz="-9.956739044358898e-10 0.0014016430223102033 -5.65554336695584e-09" rpy="0 0 0"/>
-    <mass value="0.0335765475239113"/>
-    <inertia ixx="0.00011" iyy="0.000111" izz="1e-06" ixy="-0.0" iyz="-0.0" ixz="-1e-06"/>
+    <mass value="0.035"/>
+    <inertia ixx="0.00000146" iyy="0.000189" izz="0.000188" ixy="0.0" iyz="0.0" ixz="0.0"/>
   </inertial>
   <visual>
     <origin xyz="0.2 -0.066 0.2" rpy="0 0 0"/>
@@ -595,8 +595,8 @@
 <link name="prop_5_1">
   <inertial>
     <origin xyz="-9.956739321914654e-10 0.001401642724286986 -5.655543339200264e-09" rpy="0 0 0"/>
-    <mass value="0.0335765475239113"/>
-    <inertia ixx="0.00011" iyy="0.000111" izz="1e-06" ixy="-0.0" iyz="-0.0" ixz="-1e-06"/>
+    <mass value="0.035"/>
+    <inertia ixx="0.00000146" iyy="0.000189" izz="0.000188" ixy="0.0" iyz="0.0" ixz="0.0"/>
   </inertial>
   <visual>
     <origin xyz="-0.2 -0.066 0.2" rpy="0 0 0"/>
@@ -616,8 +616,8 @@
 <link name="prop_4_1">
   <inertial>
     <origin xyz="9.956739044358898e-10 -0.0014016427242869722 -5.655543339200264e-09" rpy="0 0 0"/>
-    <mass value="0.0335765475239113"/>
-    <inertia ixx="0.00011" iyy="0.000111" izz="1e-06" ixy="-0.0" iyz="0.0" ixz="1e-06"/>
+    <mass value="0.035"/>
+    <inertia ixx="0.00000146" iyy="0.000189" izz="0.000188" ixy="0.0" iyz="0.0" ixz="0.0"/>
   </inertial>
   <visual>
     <origin xyz="-0.2 0.026 0.2" rpy="0 0 0"/>
@@ -637,8 +637,8 @@
 <link name="prop_3_1">
   <inertial>
     <origin xyz="5.65554336695584e-09 -0.0014016427242870139 9.956739321914654e-10" rpy="0 0 0"/>
-    <mass value="0.0335765475239113"/>
-    <inertia ixx="1e-06" iyy="0.000111" izz="0.00011" ixy="-0.0" iyz="-0.0" ixz="-1e-06"/>
+    <mass value="0.035"/>
+    <inertia ixx="0.00000146" iyy="0.000189" izz="0.000188" ixy="0.0" iyz="0.0" ixz="0.0"/>
   </inertial>
   <visual>
     <origin xyz="-0.2 0.026 -0.2" rpy="0 0 0"/>
@@ -658,8 +658,8 @@
 <link name="prop_2_1">
   <inertial>
     <origin xyz="9.956739321914654e-10 -0.001401642426263755 -5.655543339200264e-09" rpy="0 0 0"/>
-    <mass value="0.0335765475239113"/>
-    <inertia ixx="0.00011" iyy="0.000111" izz="1e-06" ixy="-0.0" iyz="0.0" ixz="1e-06"/>
+    <mass value="0.035"/>
+    <inertia ixx="0.00000146" iyy="0.000189" izz="0.000188" ixy="0.0" iyz="0.0" ixz="0.0"/>
   </inertial>
   <visual>
     <origin xyz="0.2 0.026 0.2" rpy="0 0 0"/>
@@ -679,8 +679,8 @@
 <link name="prop_1_1">
   <inertial>
     <origin xyz="-9.956764579488464e-10 -0.001401642724279662 5.655541840399181e-09" rpy="0 0 0"/>
-    <mass value="0.0335765475239113"/>
-    <inertia ixx="0.00011" iyy="0.000111" izz="1e-06" ixy="0.0" iyz="-0.0" ixz="1e-06"/>
+    <mass value="0.035"/>
+    <inertia ixx="0.00000146" iyy="0.000189" izz="0.000188" ixy="0.0" iyz="0.0" ixz="0.0"/>
   </inertial>
   <visual>
     <origin xyz="0.2 0.026 -0.2" rpy="0 0 0"/>
@@ -739,244 +739,91 @@
   </collision>
 </link>
 
-<!-- Virtual intermediate links for redundant actuation -->
-<link name="virtual_1">
-  <inertial>
-    <origin xyz="0 0 0" rpy="0 0 0"/>
-    <mass value="0.001"/>
-    <inertia ixx="0.000001" iyy="0.000001" izz="0.000001" ixy="0.0" iyz="0.0" ixz="0.0"/>
-  </inertial>
-  <visual>
-    <origin xyz="0 0 0" rpy="0 0 0"/>
-    <geometry>
-      <box size="0.001 0.001 0.001"/>
-    </geometry>
-    <material name="transparent"/>
-  </visual>
-  <collision>
-    <origin xyz="0 0 0" rpy="0 0 0"/>
-    <geometry>
-      <box size="0.001 0.001 0.001"/>
-    </geometry>
-  </collision>
-</link>
-
-<link name="virtual_2">
-  <inertial>
-    <origin xyz="0 0 0" rpy="0 0 0"/>
-    <mass value="0.001"/>
-    <inertia ixx="0.000001" iyy="0.000001" izz="0.000001" ixy="0.0" iyz="0.0" ixz="0.0"/>
-  </inertial>
-  <visual>
-    <origin xyz="0 0 0" rpy="0 0 0"/>
-    <geometry>
-      <box size="0.001 0.001 0.001"/>
-    </geometry>
-    <material name="transparent"/>
-  </visual>
-  <collision>
-    <origin xyz="0 0 0" rpy="0 0 0"/>
-    <geometry>
-      <box size="0.001 0.001 0.001"/>
-    </geometry>
-  </collision>
-</link>
-
-<link name="virtual_3">
-  <inertial>
-    <origin xyz="0 0 0" rpy="0 0 0"/>
-    <mass value="0.001"/>
-    <inertia ixx="0.000001" iyy="0.000001" izz="0.000001" ixy="0.0" iyz="0.0" ixz="0.0"/>
-  </inertial>
-  <visual>
-    <origin xyz="0 0 0" rpy="0 0 0"/>
-    <geometry>
-      <box size="0.001 0.001 0.001"/>
-    </geometry>
-    <material name="transparent"/>
-  </visual>
-  <collision>
-    <origin xyz="0 0 0" rpy="0 0 0"/>
-    <geometry>
-      <box size="0.001 0.001 0.001"/>
-    </geometry>
-  </collision>
-</link>
-
-<link name="virtual_4">
-  <inertial>
-    <origin xyz="0 0 0" rpy="0 0 0"/>
-    <mass value="0.001"/>
-    <inertia ixx="0.000001" iyy="0.000001" izz="0.000001" ixy="0.0" iyz="0.0" ixz="0.0"/>
-  </inertial>
-  <visual>
-    <origin xyz="0 0 0" rpy="0 0 0"/>
-    <geometry>
-      <box size="0.001 0.001 0.001"/>
-    </geometry>
-    <material name="transparent"/>
-  </visual>
-  <collision>
-    <origin xyz="0 0 0" rpy="0 0 0"/>
-    <geometry>
-      <box size="0.001 0.001 0.001"/>
-    </geometry>
-  </collision>
-</link>
-
 <!-- actuation joints from base link to arms -->
-<joint name="revolute_1" type="revolute">
+<joint name="rigid_1" type="fixed">
   <origin xyz="-0.2 0.02 -0.055" rpy="0 0 0"/>
   <parent link="base_link"/>
   <child link="arm_8_1"/>
   <axis xyz="0.0 0.0 1.0"/>
-  <limit upper="1.570796" lower="-1.570796" effort="100" velocity="100"/>
 </joint>
 
-<joint name="revolute_2" type="revolute">
+<joint name="rigid_2" type="fixed">
   <origin xyz="-0.055 0.02 -0.2" rpy="0 0 0"/>
   <parent link="base_link"/>
   <child link="arm_7_1"/>
   <axis xyz="1.0 0.0 0.0"/>
-  <limit upper="1.570796" lower="-1.570796" effort="100" velocity="100"/>
 </joint>
 
-<joint name="revolute_3" type="revolute">
+<joint name="rigid_3" type="fixed">
   <origin xyz="0.2 0.02 0.055" rpy="0 0 0"/>
   <parent link="base_link"/>
   <child link="arm_6_1"/>
   <axis xyz="0.0 0.0 1.0"/>
-  <limit upper="1.570796" lower="-1.570796" effort="100" velocity="100"/>
 </joint>
 
-<joint name="revolute_4" type="revolute">
+<joint name="rigid_4" type="fixed">
   <origin xyz="0.055 0.02 0.2" rpy="0 0 0"/>
   <parent link="base_link"/>
   <child link="arm_5_1"/>
   <axis xyz="1.0 0.0 0.0"/>
-  <limit upper="1.570796" lower="-1.570796" effort="100" velocity="100"/>
 </joint>
 
-<joint name="revolute_5" type="revolute">
+<joint name="rigid_5" type="fixed">
   <origin xyz="0.2 0.02 -0.055" rpy="0 0 0"/>
   <parent link="base_link"/>
   <child link="arm_4_1"/>
-  <axis xyz="0.0 0.0 1.0"/>
-  <limit upper="1.570796" lower="-1.570796" effort="100" velocity="100"/>
+  <axis xyz="0.0 0.0 1.0"/> 
 </joint>
 
-<joint name="revolute_6" type="revolute">
+<joint name="rigid_6" type="fixed">
   <origin xyz="0.055 0.02 -0.2" rpy="0 0 0"/>
   <parent link="base_link"/>
   <child link="arm_3_1"/>
   <axis xyz="1.0 0.0 0.0"/>
-  <limit upper="1.570796" lower="-1.570796" effort="100" velocity="100"/>
 </joint>
 
-<joint name="revolute_7" type="revolute">
+<joint name="rigid_7" type="fixed">
   <origin xyz="-0.2 0.02 0.055" rpy="0 0 0"/>
   <parent link="base_link"/>
   <child link="arm_2_1"/>
   <axis xyz="0.0 0.0 1.0"/>
-  <limit upper="1.570796" lower="-1.570796" effort="100" velocity="100"/>
 </joint>
 
-<joint name="revolute_8" type="revolute">
+<joint name="rigid_8" type="fixed">
   <origin xyz="-0.055 0.02 0.2" rpy="0 0 0"/>
   <parent link="base_link"/>
   <child link="arm_1_1"/>
   <axis xyz="1.0 0.0 0.0"/>
-  <limit upper="1.570796" lower="-1.570796" effort="100" velocity="100"/>
 </joint>
 
 <!-- Revolute joints connecting arms and virtual links -->
-<joint name="revolute_9" type="revolute">
+<joint name="rigid_9" type="fixed">
   <origin xyz="-0.16 0.0 0.0" rpy="0 0 0"/>
   <parent link="arm_1_1"/>
-  <child link="virtual_4"/>
+  <child link="holder_4"/>
   <axis xyz="0.0 0.0 -1.0"/>
-  <limit upper="1.570796" lower="-1.570796" effort="100" velocity="100"/>
 </joint>
 
-<joint name="revolute_10" type="revolute">
-  <origin xyz="-0.015 0.0 0.145" rpy="0 0 0"/>
-  <parent link="arm_2_1"/>
-  <child link="virtual_4"/>
-  <axis xyz="1.0 0.0 -0.0"/>
-  <limit upper="1.570796" lower="-1.570796" effort="100" velocity="100"/>
-</joint>
 
-<joint name="revolute_11" type="revolute">
-  <origin xyz="0.0 0.0 -0.16" rpy="0 0 0"/>
-  <parent link="arm_8_1"/>
-  <child link="virtual_3"/>
-  <axis xyz="1.0 0.0 0.0"/>
-  <limit upper="1.570796" lower="-1.570796" effort="100" velocity="100"/>
-</joint>
-
-<joint name="revolute_12" type="revolute">
+<joint name="rigid_12" type="fixed">
   <origin xyz="-0.145 0.0 -0.015" rpy="0 0 0"/>
   <parent link="arm_7_1"/>
-  <child link="virtual_3"/>
+  <child link="holder_3"/>
   <axis xyz="0.0 0.0 1.0"/>
-  <limit upper="1.570796" lower="-1.570796" effort="100" velocity="100"/>
 </joint>
 
-<joint name="revolute_13" type="revolute">
-  <origin xyz="0.16 0.0 0.0" rpy="0 0 0"/>
-  <parent link="arm_3_1"/>
-  <child link="virtual_2"/>
-  <axis xyz="0.0 0.0 1.0"/>
-  <limit upper="1.570796" lower="-1.570796" effort="100" velocity="100"/>
-</joint>
-
-<joint name="revolute_14" type="revolute">
+<joint name="rigid_14" type="fixed">
   <origin xyz="0.015 0.0 -0.145" rpy="0 0 0"/>
   <parent link="arm_4_1"/>
-  <child link="virtual_2"/>
+  <child link="holder_2"/>
   <axis xyz="-1.0 0.0 0.0"/>
-  <limit upper="1.570796" lower="-1.570796" effort="100" velocity="100"/>
 </joint>
 
-<joint name="revolute_15" type="revolute">
-  <origin xyz="0.0 0.0 0.16" rpy="0 0 0"/>
-  <parent link="arm_6_1"/>
-  <child link="virtual_1"/>
-  <axis xyz="-1.0 -0.0 -0.0"/>
-  <limit upper="1.570796" lower="-1.570796" effort="100" velocity="100"/>
-</joint>
-
-<joint name="revolute_16" type="revolute">
+<joint name="rigid_16" type="fixed">
   <origin xyz="0.145 0.0 0.015" rpy="0 0 0"/>
   <parent link="arm_5_1"/>
-  <child link="virtual_1"/>
-  <axis xyz="0.0 0.0 -1.0"/>
-  <limit upper="1.570796" lower="-1.570796" effort="100" velocity="100"/>
-</joint>
-
-<!-- Fixed joints connecting virtual links to holders -->
-<joint name="rigid_17" type="fixed">
-  <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
-  <parent link="virtual_1"/>
   <child link="holder_1"/>
-</joint>
-
-<joint name="rigid_18" type="fixed">
-  <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
-  <parent link="virtual_2"/>
-  <child link="holder_2"/>
-</joint>
-
-<joint name="rigid_19" type="fixed">
-  <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
-  <parent link="virtual_3"/>
-  <child link="holder_3"/>
-</joint>
-
-<joint name="rigid_20" type="fixed">
-  <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
-  <parent link="virtual_4"/>
-  <child link="holder_4"/>
+  <axis xyz="0.0 0.0 -1.0"/>
 </joint>
 
 <!-- Fixed joints connecting BLDC motors to holders -->
@@ -1052,72 +899,72 @@
   <child link="battery_1"/>
 </joint>
 
-<joint name="revolute_33" type="continuous">
+<joint name="rigid_33" type="fixed">
+  <origin xyz="-0.055 0.04 -0.2" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="gps_1"/>
+</joint>
+
+<joint name="rigid_34" type="fixed">
+  <origin xyz="0.0 0.02 0.15" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="probe_1"/>
+</joint>
+
+<joint name="revolute_35" type="continuous">
   <origin xyz="0.0 0.026 0.0" rpy="0 0 0"/>
   <parent link="bldc_8_1"/>
   <child link="prop_8_1"/>
   <axis xyz="0.0 -1.0 0.0"/>
 </joint>
 
-<joint name="revolute_34" type="continuous">
+<joint name="revolute_36" type="continuous">
   <origin xyz="0.0 0.026 0.0" rpy="0 0 0"/>
   <parent link="bldc_5_1"/>
   <child link="prop_7_1"/>
   <axis xyz="-0.0 -1.0 0.0"/>
 </joint>
 
-<joint name="revolute_35" type="continuous">
+<joint name="revolute_37" type="continuous">
   <origin xyz="0.0 0.026 0.0" rpy="0 0 0"/>
   <parent link="bldc_6_1"/>
   <child link="prop_6_1"/>
   <axis xyz="0.0 -1.0 -0.0"/>
 </joint>
 
-<joint name="revolute_36" type="continuous">
+<joint name="revolute_38" type="continuous">
   <origin xyz="0.0 0.026 0.0" rpy="0 0 0"/>
   <parent link="bldc_7_1"/>
   <child link="prop_5_1"/>
   <axis xyz="0.0 -1.0 -0.0"/>
 </joint>
 
-<joint name="revolute_37" type="continuous">
+<joint name="revolute_39" type="continuous">
   <origin xyz="0.0 -0.026 0.0" rpy="0 0 0"/>
   <parent link="bldc_4_1"/>
   <child link="prop_4_1"/>
   <axis xyz="-0.0 1.0 -0.0"/>
 </joint>
 
-<joint name="revolute_38" type="continuous">
+<joint name="revolute_40" type="continuous">
   <origin xyz="0.0 -0.026 0.0" rpy="0 0 0"/>
   <parent link="bldc_1_1"/>
   <child link="prop_3_1"/>
   <axis xyz="0.0 1.0 -0.0"/>
 </joint>
 
-<joint name="revolute_39" type="continuous">
+<joint name="revolute_41" type="continuous">
   <origin xyz="0.0 -0.026 0.0" rpy="0 0 0"/>
   <parent link="bldc_3_1"/>
   <child link="prop_2_1"/>
   <axis xyz="-0.0 1.0 -0.0"/>
 </joint>
 
-<joint name="revolute_40" type="continuous">
+<joint name="revolute_42" type="continuous">
   <origin xyz="0.0 -0.026 0.0" rpy="0 0 0"/>
   <parent link="bldc_2_1"/>
   <child link="prop_1_1"/>
   <axis xyz="0.0 1.0 0.0"/>
-</joint>
-
-<joint name="rigid_41" type="fixed">
-  <origin xyz="-0.055 0.04 -0.2" rpy="0 0 0"/>
-  <parent link="base_link"/>
-  <child link="gps_1"/>
-</joint>
-
-<joint name="rigid_42" type="fixed">
-  <origin xyz="0.0 0.02 0.15" rpy="0 0 0"/>
-  <parent link="base_link"/>
-  <child link="probe_1"/>
 </joint>
 
 </robot>

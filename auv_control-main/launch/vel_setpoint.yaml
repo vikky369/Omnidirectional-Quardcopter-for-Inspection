@@ -1,0 +1,27 @@
+cmd_vel:
+    type: geometry_msgs/TwistStamped
+    header.frame_id: 'world'
+    vx:
+        min: -10
+        max: 10
+        to: twist.linear.x
+    vy:
+        min: -10
+        max: 10
+        to: twist.linear.y
+    vz:
+        min: -10
+        max: 10
+        to: twist.linear.z
+    wx:
+        min: -pi
+        max: pi
+        to: twist.angular.x
+    wy:
+        min: -pi
+        max: pi
+        to: twist.angular.y
+    wz:
+        min: -pi
+        max: pi
+        to: twist.angular.z

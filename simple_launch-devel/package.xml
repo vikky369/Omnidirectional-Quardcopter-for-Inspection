@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>simple_launch</name>
+  <version>1.11.0</version>
+  <description>
+    Python helper class for the ROS 2 launch system
+  </description>
+  <maintainer email="olivier.kermorgant@ec-nantes.fr">Olivier Kermorgant</maintainer>
+  <license>MIT</license>
+
+  <buildtool_depend>ament_cmake_python</buildtool_depend>
+
+  <depend>launch</depend>
+  <depend>launch_ros</depend>
+  <depend>xacro</depend>
+  <depend>ament_index_python</depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>
