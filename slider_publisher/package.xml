@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>slider_publisher</name>
+  <version>2.4.1</version>
+  <description>This packages proposes a slider-based publisher node similar to the joint_state_publisher, but that can publish any type of message or call services.</description>
+
+  <maintainer email="abineshthankaraj2004@gmail.com">Abinesh Thankaraj</maintainer>
+
+  <license>MIT</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <exec_depend>rqt_gui_py</exec_depend>
+  <exec_depend>python3-numpy</exec_depend>
+  <exec_depend>python3-scipy</exec_depend>
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+  
+</package>

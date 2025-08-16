@@ -739,7 +739,7 @@
   </collision>
 </link>
 
-<!-- actuation joints from base link to arms -->
+<!-- joints from base link to arms -->
 <joint name="rigid_1" type="fixed">
   <origin xyz="-0.2 0.02 -0.055" rpy="0 0 0"/>
   <parent link="base_link"/>
@@ -796,7 +796,7 @@
   <axis xyz="1.0 0.0 0.0"/>
 </joint>
 
-<!-- Revolute joints connecting arms and virtual links -->
+<!-- joints connecting arms and holders -->
 <joint name="rigid_9" type="fixed">
   <origin xyz="-0.16 0.0 0.0" rpy="0 0 0"/>
   <parent link="arm_1_1"/>
@@ -911,6 +911,7 @@
   <child link="probe_1"/>
 </joint>
 
+<!-- Continuous joints connecting BLDC motors to propellers -->
 <joint name="revolute_35" type="continuous">
   <origin xyz="0.0 0.026 0.0" rpy="0 0 0"/>
   <parent link="bldc_8_1"/>

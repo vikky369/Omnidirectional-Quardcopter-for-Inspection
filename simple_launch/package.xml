@@ -5,7 +5,7 @@
   <description>
     Python helper class for the ROS 2 launch system
   </description>
-  <maintainer email="olivier.kermorgant@ec-nantes.fr">Olivier Kermorgant</maintainer>
+  <maintainer email="abineshthankaraj2004@gmail.com">Abinesh Thankaraj</maintainer>
   <license>MIT</license>
 
   <buildtool_depend>ament_cmake_python</buildtool_depend>
