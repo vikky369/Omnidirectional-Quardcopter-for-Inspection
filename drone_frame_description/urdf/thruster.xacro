@@ -1,0 +1,230 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<link name="prop_8_1">
+  <inertial>
+    <origin xyz="5.65554336695584e-09 0.0014016427242870277 -9.956738766803142e-10" rpy="0 0 0"/>
+    <mass value="0.035"/>
+    <inertia ixx="0.00000146" iyy="0.000189" izz="0.000188" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.2 -0.066 -0.2" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find drone_frame_description)/meshes/prop_8_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="red"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.2 -0.066 -0.2" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find drone_frame_description)/meshes/prop_8_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="prop_7_1">
+  <inertial>
+    <origin xyz="9.956764301932708e-10 0.001401642724294494 5.655541951421483e-09" rpy="0 0 0"/>
+    <mass value="0.035"/>
+    <inertia ixx="0.00000146" iyy="0.000189" izz="0.000188" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.2 -0.066 -0.2" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find drone_frame_description)/meshes/prop_7_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="red"/>
+  </visual>
+  <collision>
+    <origin xyz="0.2 -0.066 -0.2" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find drone_frame_description)/meshes/prop_7_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="prop_6_1">
+  <inertial>
+    <origin xyz="-9.956739044358898e-10 0.0014016430223102033 -5.65554336695584e-09" rpy="0 0 0"/>
+    <mass value="0.035"/>
+    <inertia ixx="0.00000146" iyy="0.000189" izz="0.000188" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.2 -0.066 0.2" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find drone_frame_description)/meshes/prop_6_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="red"/>
+  </visual>
+  <collision>
+    <origin xyz="0.2 -0.066 0.2" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find drone_frame_description)/meshes/prop_6_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="prop_5_1">
+  <inertial>
+    <origin xyz="-9.956739321914654e-10 0.001401642724286986 -5.655543339200264e-09" rpy="0 0 0"/>
+    <mass value="0.035"/>
+    <inertia ixx="0.00000146" iyy="0.000189" izz="0.000188" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.2 -0.066 0.2" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find drone_frame_description)/meshes/prop_5_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="red"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.2 -0.066 0.2" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find drone_frame_description)/meshes/prop_5_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="prop_4_1">
+  <inertial>
+    <origin xyz="9.956739044358898e-10 -0.0014016427242869722 -5.655543339200264e-09" rpy="0 0 0"/>
+    <mass value="0.035"/>
+    <inertia ixx="0.00000146" iyy="0.000189" izz="0.000188" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.2 0.026 0.2" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find drone_frame_description)/meshes/prop_4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="red"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.2 0.026 0.2" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find drone_frame_description)/meshes/prop_4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="prop_3_1">
+  <inertial>
+    <origin xyz="5.65554336695584e-09 -0.0014016427242870139 9.956739321914654e-10" rpy="0 0 0"/>
+    <mass value="0.035"/>
+    <inertia ixx="0.00000146" iyy="0.000189" izz="0.000188" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.2 0.026 -0.2" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find drone_frame_description)/meshes/prop_3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="red"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.2 0.026 -0.2" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find drone_frame_description)/meshes/prop_3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="prop_2_1">
+  <inertial>
+    <origin xyz="9.956739321914654e-10 -0.001401642426263755 -5.655543339200264e-09" rpy="0 0 0"/>
+    <mass value="0.035"/>
+    <inertia ixx="0.00000146" iyy="0.000189" izz="0.000188" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.2 0.026 0.2" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find drone_frame_description)/meshes/prop_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="red"/>
+  </visual>
+  <collision>
+    <origin xyz="0.2 0.026 0.2" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find drone_frame_description)/meshes/prop_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="prop_1_1">
+  <inertial>
+    <origin xyz="-9.956764579488464e-10 -0.001401642724279662 5.655541840399181e-09" rpy="0 0 0"/>
+    <mass value="0.035"/>
+    <inertia ixx="0.00000146" iyy="0.000189" izz="0.000188" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.2 0.026 -0.2" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find drone_frame_description)/meshes/prop_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="red"/>
+  </visual>
+  <collision>
+    <origin xyz="0.2 0.026 -0.2" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find drone_frame_description)/meshes/prop_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<!-- Continuous joints connecting BLDC motors to propellers -->
+<joint name="revolute_35" type="continuous">
+  <origin xyz="0.0 0.026 0.0" rpy="0 0 0"/>
+  <parent link="bldc_8_1"/>
+  <child link="prop_8_1"/>
+  <axis xyz="0.0 -1.0 0.0"/>
+</joint>
+
+<joint name="revolute_36" type="continuous">
+  <origin xyz="0.0 0.026 0.0" rpy="0 0 0"/>
+  <parent link="bldc_5_1"/>
+  <child link="prop_7_1"/>
+  <axis xyz="-0.0 -1.0 0.0"/>
+</joint>
+
+<joint name="revolute_37" type="continuous">
+  <origin xyz="0.0 0.026 0.0" rpy="0 0 0"/>
+  <parent link="bldc_6_1"/>
+  <child link="prop_6_1"/>
+  <axis xyz="0.0 -1.0 -0.0"/>
+</joint>
+
+<joint name="revolute_38" type="continuous">
+  <origin xyz="0.0 0.026 0.0" rpy="0 0 0"/>
+  <parent link="bldc_7_1"/>
+  <child link="prop_5_1"/>
+  <axis xyz="0.0 -1.0 -0.0"/>
+</joint>
+
+<joint name="revolute_39" type="continuous">
+  <origin xyz="0.0 -0.026 0.0" rpy="0 0 0"/>
+  <parent link="bldc_4_1"/>
+  <child link="prop_4_1"/>
+  <axis xyz="-0.0 1.0 -0.0"/>
+</joint>
+
+<joint name="revolute_40" type="continuous">
+  <origin xyz="0.0 -0.026 0.0" rpy="0 0 0"/>
+  <parent link="bldc_1_1"/>
+  <child link="prop_3_1"/>
+  <axis xyz="0.0 1.0 -0.0"/>
+</joint>
+
+<joint name="revolute_41" type="continuous">
+  <origin xyz="0.0 -0.026 0.0" rpy="0 0 0"/>
+  <parent link="bldc_3_1"/>
+  <child link="prop_2_1"/>
+  <axis xyz="-0.0 1.0 -0.0"/>
+</joint>
+
+<joint name="revolute_42" type="continuous">
+  <origin xyz="0.0 -0.026 0.0" rpy="0 0 0"/>
+  <parent link="bldc_2_1"/>
+  <child link="prop_1_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+</joint>
+
+
+</robot>
