@@ -11,56 +11,56 @@
   <gravity>true</gravity>
 </gazebo>
 
-<gazebo reference="arm_8_1">
+<gazebo reference="arm_8">
   <material>${body_color}</material>
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>
   <self_collide>true</self_collide>
 </gazebo>
 
-<gazebo reference="arm_7_1">
+<gazebo reference="arm_7">
   <material>${body_color}</material>
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>
   <self_collide>true</self_collide>
 </gazebo>
 
-<gazebo reference="arm_6_1">
+<gazebo reference="arm_6">
   <material>${body_color}</material>
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>
   <self_collide>true</self_collide>
 </gazebo>
 
-<gazebo reference="arm_5_1">
+<gazebo reference="arm_5">
   <material>${body_color}</material>
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>
   <self_collide>true</self_collide>
 </gazebo>
 
-<gazebo reference="arm_4_1">
+<gazebo reference="arm_4">
   <material>${body_color}</material>
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>
   <self_collide>true</self_collide>
 </gazebo>
 
-<gazebo reference="arm_3_1">
+<gazebo reference="arm_3">
   <material>${body_color}</material>
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>
   <self_collide>true</self_collide>
 </gazebo>
 
-<gazebo reference="arm_2_1">
+<gazebo reference="arm_2">
   <material>${body_color}</material>
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>
   <self_collide>true</self_collide>
 </gazebo>
 
-<gazebo reference="arm_1_1">
+<gazebo reference="arm_1">
   <material>${body_color}</material>
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>
@@ -95,154 +95,154 @@
   <self_collide>true</self_collide>
 </gazebo>
 
-<gazebo reference="bldc_8_1">
+<gazebo reference="motor_8">
   <material>${body_color}</material>
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>
   <self_collide>true</self_collide>
 </gazebo>
 
-<gazebo reference="bldc_7_1">
+<gazebo reference="motor_7">
   <material>${body_color}</material>
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>
   <self_collide>true</self_collide>
 </gazebo>
 
-<gazebo reference="bldc_6_1">
+<gazebo reference="motor_6">
   <material>${body_color}</material>
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>
   <self_collide>true</self_collide>
 </gazebo>
 
-<gazebo reference="bldc_5_1">
+<gazebo reference="motor_5">
   <material>${body_color}</material>
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>
   <self_collide>true</self_collide>
 </gazebo>
 
-<gazebo reference="bldc_4_1">
+<gazebo reference="motor_4">
   <material>${body_color}</material>
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>
   <self_collide>true</self_collide>
 </gazebo>
 
-<gazebo reference="bldc_3_1">
+<gazebo reference="motor_3">
   <material>${body_color}</material>
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>
   <self_collide>true</self_collide>
 </gazebo>
 
-<gazebo reference="bldc_2_1">
+<gazebo reference="motor_2">
   <material>${body_color}</material>
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>
   <self_collide>true</self_collide>
 </gazebo>
 
-<gazebo reference="bldc_1_1">
+<gazebo reference="motor_1">
   <material>${body_color}</material>
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>
   <self_collide>true</self_collide>
 </gazebo>
 
-<gazebo reference="controller_1">
+<gazebo reference="controller">
   <material>${body_color}</material>
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>
   <self_collide>true</self_collide>
 </gazebo>
 
-<gazebo reference="wifi_1">
+<gazebo reference="wifi">
   <material>${body_color}</material>
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>
   <self_collide>true</self_collide>
 </gazebo>
 
-<gazebo reference="camera_1">
+<gazebo reference="camera">
   <material>${body_color}</material>
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>
   <self_collide>true</self_collide>
 </gazebo>
 
-<gazebo reference="battery_1">
+<gazebo reference="battery">
   <material>${body_color}</material>
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>
   <self_collide>true</self_collide>
 </gazebo>
 
-<gazebo reference="prop_8_1">
+<gazebo reference="thruster_8">
   <material>${body_color}</material>
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>
   <self_collide>true</self_collide>
 </gazebo>
 
-<gazebo reference="prop_7_1">
+<gazebo reference="thruster_7">
   <material>${body_color}</material>
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>
   <self_collide>true</self_collide>
 </gazebo>
 
-<gazebo reference="prop_6_1">
+<gazebo reference="thruster_6">
   <material>${body_color}</material>
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>
   <self_collide>true</self_collide>
 </gazebo>
 
-<gazebo reference="prop_5_1">
+<gazebo reference="thruster_5">
   <material>${body_color}</material>
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>
   <self_collide>true</self_collide>
 </gazebo>
 
-<gazebo reference="prop_4_1">
+<gazebo reference="thruster_4">
   <material>${body_color}</material>
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>
   <self_collide>true</self_collide>
 </gazebo>
 
-<gazebo reference="prop_3_1">
+<gazebo reference="thruster_3">
   <material>${body_color}</material>
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>
   <self_collide>true</self_collide>
 </gazebo>
 
-<gazebo reference="prop_2_1">
+<gazebo reference="thruster_2">
   <material>${body_color}</material>
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>
   <self_collide>true</self_collide>
 </gazebo>
 
-<gazebo reference="prop_1_1">
+<gazebo reference="thruster_1">
   <material>${body_color}</material>
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>
   <self_collide>true</self_collide>
 </gazebo>
 
-<gazebo reference="gps_1">
+<gazebo reference="gps">
   <material>${body_color}</material>
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>
   <self_collide>true</self_collide>
 </gazebo>
 
-<gazebo reference="probe_1">
+<gazebo reference="probe">
   <material>${body_color}</material>
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>

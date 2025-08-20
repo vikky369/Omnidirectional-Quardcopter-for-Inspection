@@ -1,0 +1,14 @@
+{
+    "python.autoComplete.extraPaths": [
+        "/home/pdc/omni_ws/install/auv_control/local/lib/python3.10/dist-packages",
+        "/home/pdc/omni_ws/install/simple_launch/local/lib/python3.10/dist-packages",
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages"
+    ],
+    "python.analysis.extraPaths": [
+        "/home/pdc/omni_ws/install/auv_control/local/lib/python3.10/dist-packages",
+        "/home/pdc/omni_ws/install/simple_launch/local/lib/python3.10/dist-packages",
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages"
+    ]
+}

@@ -1,336 +1,107 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro">
 
-<link name="holder_4">
-  <inertial>
-    <origin xyz="0.0012743502456399602 -1.933707013956898e-11 -0.016274350245639946" rpy="0 0 0"/>
-    <mass value="0.545696208866394"/>
-    <inertia ixx="0.00016" iyy="0.000161" izz="0.00016" ixy="-0.0" iyz="0.0" ixz="-1e-06"/>
-  </inertial>
-  <visual>
-    <origin xyz="0.215 -0.02 -0.2" rpy="0 0 0"/>
-    <geometry>
-      <mesh filename="file://$(find drone_frame_description)/meshes/holder_4_1.stl" scale="0.001 0.001 0.001"/>
-    </geometry>
-    <material name="silver"/>
-  </visual>
-  <collision>
-    <origin xyz="0.2 -0.02 -0.215" rpy="0 0 0"/>
-    <geometry>
-      <mesh filename="file://$(find drone_frame_description)/meshes/holder_4_1.stl" scale="0.001 0.001 0.001"/>
-    </geometry>
-  </collision>
-</link>
+<xacro:macro name="holder" params="holder_num io vo co ixx iyy izz ixy iyz ixz">
+  <link name="holder_${holder_num}">
+    <inertial>
+      <origin xyz="${io}" rpy="0 0 0"/>
+      <mass value="0.545696208866394"/>
+      <inertia ixx="${ixx}" iyy="${iyy}" izz="${izz}" ixy="${ixy}" iyz="${iyz}" ixz="${ixz}"/>
+    </inertial>
+    <visual>
+      <origin xyz="${vo}" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="file://$(find drone_frame_description)/meshes/holder_${holder_num}_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="silver"/>
+    </visual>
+    <collision>
+      <origin xyz="${co}" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="file://$(find drone_frame_description)/meshes/holder_${holder_num}_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+</xacro:macro>
 
-<link name="holder_3">
-  <inertial>
-    <origin xyz="0.01627435024563989 3.173676564605099e-10 0.0012743502456399047" rpy="0 0 0"/>
-    <mass value="0.545696208866394"/>
-    <inertia ixx="0.00016" iyy="0.000161" izz="0.00016" ixy="0.0" iyz="0.0" ixz="1e-06"/>
-  </inertial>
-  <visual>
-    <origin xyz="0.20 -0.02 0.215" rpy="0 0 0"/>
-    <geometry>
-      <mesh filename="file://$(find drone_frame_description)/meshes/holder_3_1.stl" scale="0.001 0.001 0.001"/>
-    </geometry>
-    <material name="silver"/>
-  </visual>
-  <collision>
-    <origin xyz="0.215 -0.02 0.215" rpy="0 0 0"/>
-    <geometry>
-      <mesh filename="file://$(find drone_frame_description)/meshes/holder_3_1.stl" scale="0.001 0.001 0.001"/>
-    </geometry>
-  </collision>
-</link>
+<xacro:holder holder_num="1" io="-0.01627435024563989 -1.9344414958766265e-11 -0.0012743502456399047" vo="-0.2 -0.02 -0.215"
+              co="-0.215 -0.02 -0.2" ixx="0.00016" iyy="0.000161" izz="0.00016" ixy="0.0" iyz="0.0" ixz="1e-06" />
+<xacro:holder holder_num="2" io="-0.0012743502456399047 -1.9344432306001025e-11 0.01627435024563989" vo="-0.215 -0.02 0.2"
+              co="-0.2 -0.02 0.215" ixx="0.00016" iyy="0.000161" izz="0.00016" ixy="0.0" iyz="-0.0" ixz="-1e-06" />
+<xacro:holder holder_num="3" io="0.01627435024563989 3.173676564605099e-10 0.0012743502456399047" vo="0.20 -0.02 0.215"
+              co="0.215 -0.02 0.215" ixx="0.00016" iyy="0.000161" izz="0.00016" ixy="0.0" iyz="0.0" ixz="1e-06" />
+<xacro:holder holder_num="4" io="0.0012743502456399602 -1.933707013956898e-11 -0.016274350245639946" vo="0.215 -0.02 -0.2"
+              co="0.2 -0.02 -0.215" ixx="0.00016" iyy="0.000161" izz="0.00016" ixy="-0.0" iyz="0.0" ixz="-1e-06" />
 
-<link name="holder_2">
-  <inertial>
-    <origin xyz="-0.0012743502456399047 -1.9344432306001025e-11 0.01627435024563989" rpy="0 0 0"/>
-    <mass value="0.545696208866394"/>
-    <inertia ixx="0.00016" iyy="0.000161" izz="0.00016" ixy="0.0" iyz="-0.0" ixz="-1e-06"/>
-  </inertial>
-  <visual>
-    <origin xyz="-0.215 -0.02 0.2" rpy="0 0 0"/>
-    <geometry>
-      <mesh filename="file://$(find drone_frame_description)/meshes/holder_2_1.stl" scale="0.001 0.001 0.001"/>
-    </geometry>
-    <material name="silver"/>
-  </visual>
-  <collision>
-    <origin xyz="-0.2 -0.02 0.215" rpy="0 0 0"/>
-    <geometry>
-      <mesh filename="file://$(find drone_frame_description)/meshes/holder_2_1.stl" scale="0.001 0.001 0.001"/>
-    </geometry>
-  </collision>
-</link>
+<xacro:macro name="holder_joint" params="holder_num parent origin axis">
+  <joint name="holder_joint_${holder_num}" type="fixed">
+    <origin xyz="${origin}" rpy="0 0 0"/>
+    <parent link="${parent}"/>
+    <child link="holder_${holder_num}"/>
+    <axis xyz="{axis}"/>
+  </joint>
+</xacro:macro>
 
-<link name="holder_1">
-  <inertial>
-    <origin xyz="-0.01627435024563989 -1.9344414958766265e-11 -0.0012743502456399047" rpy="0 0 0"/>
-    <mass value="0.545696208866394"/>
-    <inertia ixx="0.00016" iyy="0.000161" izz="0.00016" ixy="0.0" iyz="0.0" ixz="1e-06"/>
-  </inertial>
-  <visual>
-    <origin xyz="-0.2 -0.02 -0.215" rpy="0 0 0"/>
-    <geometry>
-      <mesh filename="file://$(find drone_frame_description)/meshes/holder_1_1.stl" scale="0.001 0.001 0.001"/>
-    </geometry>
-    <material name="silver"/>
-  </visual>
-  <collision>
-    <origin xyz="-0.215 -0.02 -0.2" rpy="0 0 0"/>
-    <geometry>
-      <mesh filename="file://$(find drone_frame_description)/meshes/holder_1_1.stl" scale="0.001 0.001 0.001"/>
-    </geometry>
-  </collision>
-</link>
+<xacro:holder_joint holder_num="4" parent="arm_1" origin="-0.16 0.0 0.0" axis="0.0 0.0 -1.0" />
+<xacro:holder_joint holder_num="3" parent="arm_7" origin="-0.145 0.0 -0.015" axis="0.0 0.0 1.0" />
+<xacro:holder_joint holder_num="2" parent="arm_4" origin="0.015 0.0 -0.145" axis="-1.0 0.0 0.0" />
+<xacro:holder_joint holder_num="1" parent="arm_5" origin="0.145 0.0 0.015" axis="0.0 0.0 -1.0" />
 
-<link name="bldc_8_1">
-  <inertial>
-    <origin xyz="-9.850613495537841e-06 0.012072048037910045 2.6988692206020293e-05" rpy="0 0 0"/>
-    <mass value="0.22635455509580407"/>
-    <inertia ixx="6.6e-05" iyy="0.000112" izz="6.6e-05" ixy="0.0" iyz="-0.0" ixz="0.0"/>
-  </inertial>
-  <visual>
-    <origin xyz="-0.2 -0.04 -0.2" rpy="0 0 0"/>
-    <geometry>
-      <mesh filename="file://$(find drone_frame_description)/meshes/bldc_8_1.stl" scale="0.001 0.001 0.001"/>
-    </geometry>
-    <material name="silver"/>
-  </visual>
-  <collision>
-    <origin xyz="-0.2 -0.04 -0.2" rpy="0 0 0"/>
-    <geometry>
-      <mesh filename="file://$(find drone_frame_description)/meshes/bldc_8_1.stl" scale="0.001 0.001 0.001"/>
-    </geometry>
-  </collision>
-</link>
+<xacro:macro name="motor" params="motor_num io vco ixy iyz ixz">
+  <link name="motor_${motor_num}">
+    <inertial>
+      <origin xyz="${io}" rpy="0 0 0"/>
+      <mass value="0.22635455509580407"/>
+      <inertia ixx="6.6e-05" iyy="0.000112" izz="6.6e-05" ixy="${ixy}" iyz="${iyz}" ixz="${ixz}"/>
+    </inertial>
+    <visual>
+      <origin xyz="${vco}" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="file://$(find drone_frame_description)/meshes/bldc_${motor_num}_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="blue"/>
+    </visual>
+    <collision>
+      <origin xyz="${vco}" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="file://$(find drone_frame_description)/meshes/bldc_${motor_num}_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+</xacro:macro>
 
-<link name="bldc_7_1">
-  <inertial>
-    <origin xyz="2.6989159021245657e-05 0.012072048037909955 9.851740487398786e-06" rpy="0 0 0"/>
-    <mass value="0.22635455509580502"/>
-    <inertia ixx="6.6e-05" iyy="0.000112" izz="6.6e-05" ixy="-0.0" iyz="-0.0" ixz="-0.0"/>
-  </inertial>
-  <visual>
-    <origin xyz="-0.2 -0.04 0.2" rpy="0 0 0"/>
-    <geometry>
-      <mesh filename="file://$(find drone_frame_description)/meshes/bldc_7_1.stl" scale="0.001 0.001 0.001"/>
-    </geometry>
-    <material name="silver"/>
-  </visual>
-  <collision>
-    <origin xyz="-0.2 -0.04 0.2" rpy="0 0 0"/>
-    <geometry>
-      <mesh filename="file://$(find drone_frame_description)/meshes/bldc_7_1.stl" scale="0.001 0.001 0.001"/>
-    </geometry>
-  </collision>
-</link>
+<xacro:motor motor_num="8" io="-9.850613495537841e-06 0.012072048037910045 2.6988692206020293e-05" vco="-0.2 -0.04 -0.2"
+              ixy="0.0" iyz="-0.0" ixz="0.0" />
+<xacro:motor motor_num="7" io="2.6989159021245657e-05 0.012072048037909955 9.851740487398786e-06" vco="-0.2 -0.04 0.2"
+              ixy="-0.0" iyz="-0.0" ixz="-0.0" />
+<xacro:motor motor_num="6" io="2.6989159021273412e-05 0.012072048335933179 9.851740487398786e-06" vco="0.2 -0.04 0.2"
+              ixy="-0.0" iyz="-0.0" ixz="-0.0" />
+<xacro:motor motor_num="5" io="-2.6989159019580322e-05 0.01207204803791747 -9.851740487953897e-06" vco="0.2 -0.04 -0.2"
+              ixy="0.0" iyz="0.0" ixz="-0.0" />
+<xacro:motor motor_num="4" io="-2.6989159021273412e-05 -0.012072048037909955 9.851740487398786e-06" vco="-0.2 -0.0 0.2"
+              ixy="-0.0" iyz="0.0" ixz="0.0" />
+<xacro:motor motor_num="3" io="-2.6989159021245657e-05 -0.01207204773988673 9.851740487398786e-06" vco="0.2 -0.0 0.2"
+              ixy="-0.0" iyz="0.0" ixz="0.0" />
+<xacro:motor motor_num="2" io="2.6989159019635833e-05 -0.012072048037902619 -9.851740487953897e-06" vco="0.2 -0.0 -0.2"
+              ixy="0.0" iyz="-0.0" ixz="0.0" />
+<xacro:motor motor_num="1" io="-9.85174048737103e-06 -0.012072048037909984 -2.6989159021245657e-05" vco="-0.2 0.0 -0.2"
+              ixy="-0.0" iyz="-0.0" ixz="-0.0" />
 
-<link name="bldc_6_1">
-  <inertial>
-    <origin xyz="2.6989159021273412e-05 0.012072048335933179 9.851740487398786e-06" rpy="0 0 0"/>
-    <mass value="0.22635455509580502"/>
-    <inertia ixx="6.6e-05" iyy="0.000112" izz="6.6e-05" ixy="-0.0" iyz="-0.0" ixz="-0.0"/>
-  </inertial>
-  <visual>
-    <origin xyz="0.2 -0.04 0.2" rpy="0 0 0"/>
-    <geometry>
-      <mesh filename="file://$(find drone_frame_description)/meshes/bldc_6_1.stl" scale="0.001 0.001 0.001"/>
-    </geometry>
-    <material name="silver"/>
-  </visual>
-  <collision>
-    <origin xyz="0.2 -0.04 0.2" rpy="0 0 0"/>
-    <geometry>
-      <mesh filename="file://$(find drone_frame_description)/meshes/bldc_6_1.stl" scale="0.001 0.001 0.001"/>
-    </geometry>
-  </collision>
-</link>
+<xacro:macro name="motor_joint" params="motor_num parent origin ">
+  <joint name="motor_joint_${motor_num}" type="fixed">
+    <origin xyz="${origin}" rpy="0 0 0"/>
+    <parent link="${parent}"/>
+    <child link="motor_${motor_num}"/>
+  </joint>
+</xacro:macro>
 
-<link name="bldc_5_1">
-  <inertial>
-    <origin xyz="-2.6989159019580322e-05 0.01207204803791747 -9.851740487953897e-06" rpy="0 0 0"/>
-    <mass value="0.22635455509580502"/>
-    <inertia ixx="6.6e-05" iyy="0.000112" izz="6.6e-05" ixy="0.0" iyz="0.0" ixz="-0.0"/>
-  </inertial>
-  <visual>
-    <origin xyz="0.2 -0.04 -0.2" rpy="0 0 0"/>
-    <geometry>
-      <mesh filename="file://$(find drone_frame_description)/meshes/bldc_5_1.stl" scale="0.001 0.001 0.001"/>
-    </geometry>
-    <material name="silver"/>
-  </visual>
-  <collision>
-    <origin xyz="0.2 -0.04 -0.2" rpy="0 0 0"/>
-    <geometry>
-      <mesh filename="file://$(find drone_frame_description)/meshes/bldc_5_1.stl" scale="0.001 0.001 0.001"/>
-    </geometry>
-  </collision>
-</link>
-
-<link name="bldc_4_1">
-  <inertial>
-    <origin xyz="-2.6989159021273412e-05 -0.012072048037909955 9.851740487398786e-06" rpy="0 0 0"/>
-    <mass value="0.22635455509580502"/>
-    <inertia ixx="6.6e-05" iyy="0.000112" izz="6.6e-05" ixy="-0.0" iyz="0.0" ixz="0.0"/>
-  </inertial>
-  <visual>
-    <origin xyz="-0.2 -0.0 0.2" rpy="0 0 0"/>
-    <geometry>
-      <mesh filename="file://$(find drone_frame_description)/meshes/bldc_4_1.stl" scale="0.001 0.001 0.001"/>
-    </geometry>
-    <material name="silver"/>
-  </visual>
-  <collision>
-    <origin xyz="-0.2 -0.0 0.2" rpy="0 0 0"/>
-    <geometry>
-      <mesh filename="file://$(find drone_frame_description)/meshes/bldc_4_1.stl" scale="0.001 0.001 0.001"/>
-    </geometry>
-  </collision>
-</link>
-
-<link name="bldc_3_1">
-  <inertial>
-    <origin xyz="-2.6989159021245657e-05 -0.01207204773988673 9.851740487398786e-06" rpy="0 0 0"/>
-    <mass value="0.22635455509580502"/>
-    <inertia ixx="6.6e-05" iyy="0.000112" izz="6.6e-05" ixy="-0.0" iyz="0.0" ixz="0.0"/>
-  </inertial>
-  <visual>
-    <origin xyz="0.2 -0.0 0.2" rpy="0 0 0"/>
-    <geometry>
-      <mesh filename="file://$(find drone_frame_description)/meshes/bldc_3_1.stl" scale="0.001 0.001 0.001"/>
-    </geometry>
-    <material name="silver"/>
-  </visual>
-  <collision>
-    <origin xyz="0.2 -0.0 0.2" rpy="0 0 0"/>
-    <geometry>
-      <mesh filename="file://$(find drone_frame_description)/meshes/bldc_3_1.stl" scale="0.001 0.001 0.001"/>
-    </geometry>
-  </collision>
-</link>
-
-<link name="bldc_2_1">
-  <inertial>
-    <origin xyz="2.6989159019635833e-05 -0.012072048037902619 -9.851740487953897e-06" rpy="0 0 0"/>
-    <mass value="0.22635455509580502"/>
-    <inertia ixx="6.6e-05" iyy="0.000112" izz="6.6e-05" ixy="0.0" iyz="-0.0" ixz="0.0"/>
-  </inertial>
-  <visual>
-    <origin xyz="0.2 -0.0 -0.2" rpy="0 0 0"/>
-    <geometry>
-      <mesh filename="file://$(find drone_frame_description)/meshes/bldc_2_1.stl" scale="0.001 0.001 0.001"/>
-    </geometry>
-    <material name="silver"/>
-  </visual>
-  <collision>
-    <origin xyz="0.2 -0.0 -0.2" rpy="0 0 0"/>
-    <geometry>
-      <mesh filename="file://$(find drone_frame_description)/meshes/bldc_2_1.stl" scale="0.001 0.001 0.001"/>
-    </geometry>
-  </collision>
-</link>
-
-<link name="bldc_1_1">
-  <inertial>
-    <origin xyz="-9.85174048737103e-06 -0.012072048037909984 -2.6989159021245657e-05" rpy="0 0 0"/>
-    <mass value="0.22635455509580502"/>
-    <inertia ixx="6.6e-05" iyy="0.000112" izz="6.6e-05" ixy="-0.0" iyz="-0.0" ixz="-0.0"/>
-  </inertial>
-  <visual>
-    <origin xyz="-0.2 0.0 -0.2" rpy="0 0 0"/>
-    <geometry>
-      <mesh filename="file://$(find drone_frame_description)/meshes/bldc_1_1.stl" scale="0.001 0.001 0.001"/>
-    </geometry>
-    <material name="silver"/>
-  </visual>
-  <collision>
-    <origin xyz="-0.2 0.0 -0.2" rpy="0 0 0"/>
-    <geometry>
-      <mesh filename="file://$(find drone_frame_description)/meshes/bldc_1_1.stl" scale="0.001 0.001 0.001"/>
-    </geometry>
-  </collision>
-</link>
-
-<!-- joints connecting arms and holders -->
-<joint name="rigid_9" type="fixed">
-  <origin xyz="-0.16 0.0 0.0" rpy="0 0 0"/>
-  <parent link="arm_1_1"/>
-  <child link="holder_4"/>
-  <axis xyz="0.0 0.0 -1.0"/>
-</joint>
-
-
-<joint name="rigid_12" type="fixed">
-  <origin xyz="-0.145 0.0 -0.015" rpy="0 0 0"/>
-  <parent link="arm_7_1"/>
-  <child link="holder_3"/>
-  <axis xyz="0.0 0.0 1.0"/>
-</joint>
-
-<joint name="rigid_14" type="fixed">
-  <origin xyz="0.015 0.0 -0.145" rpy="0 0 0"/>
-  <parent link="arm_4_1"/>
-  <child link="holder_2"/>
-  <axis xyz="-1.0 0.0 0.0"/>
-</joint>
-
-<joint name="rigid_16" type="fixed">
-  <origin xyz="0.145 0.0 0.015" rpy="0 0 0"/>
-  <parent link="arm_5_1"/>
-  <child link="holder_1"/>
-  <axis xyz="0.0 0.0 -1.0"/>
-</joint>
-
-<!-- Fixed joints connecting BLDC motors to holders -->
-<joint name="rigid_21" type="fixed">
-  <origin xyz="0.0 0.02 -0.015" rpy="0 0 0"/>
-  <parent link="holder_1"/>
-  <child link="bldc_8_1"/>
-</joint>
-
-<joint name="rigid_22" type="fixed">
-  <origin xyz="-0.015 0.02 0.0" rpy="0 0 0"/>
-  <parent link="holder_2"/>
-  <child link="bldc_7_1"/>
-</joint>
-
-<joint name="rigid_23" type="fixed">
-  <origin xyz="0.0 0.02 0.015" rpy="0 0 0"/>
-  <parent link="holder_3"/>
-  <child link="bldc_6_1"/>
-</joint>
-
-<joint name="rigid_24" type="fixed">
-  <origin xyz="0.015 0.02 0.0" rpy="0 0 0"/>
-  <parent link="holder_4"/>
-  <child link="bldc_5_1"/>
-</joint>
-
-<joint name="rigid_25" type="fixed">
-  <origin xyz="-0.015 -0.02 0.0" rpy="0 0 0"/>
-  <parent link="holder_2"/>
-  <child link="bldc_4_1"/>
-</joint>
-
-<joint name="rigid_26" type="fixed">
-  <origin xyz="0.0 -0.02 0.015" rpy="0 0 0"/>
-  <parent link="holder_3"/>
-  <child link="bldc_3_1"/>
-</joint>
-
-<joint name="rigid_27" type="fixed">
-  <origin xyz="0.015 -0.02 0.0" rpy="0 0 0"/>
-  <parent link="holder_4"/>
-  <child link="bldc_2_1"/>
-</joint>
-
-<joint name="rigid_28" type="fixed">
-  <origin xyz="0.0 -0.02 -0.015" rpy="0 0 0"/>
-  <parent link="holder_1"/>
-  <child link="bldc_1_1"/>
-</joint>
-
+<xacro:motor_joint motor_num="8" parent="holder_1" origin="0.0 0.02 -0.015" />
+<xacro:motor_joint motor_num="7" parent="holder_2" origin="-0.015 0.02 0.0" />
+<xacro:motor_joint motor_num="6" parent="holder_3" origin="0.0 0.02 0.015" />
+<xacro:motor_joint motor_num="5" parent="holder_4" origin="0.015 0.02 0.0" />
+<xacro:motor_joint motor_num="4" parent="holder_2" origin="-0.015 -0.02 0.0" />
+<xacro:motor_joint motor_num="3" parent="holder_3" origin="0.0 -0.02 0.015" />
+<xacro:motor_joint motor_num="2" parent="holder_4" origin="0.015 -0.02 0.0" />
+<xacro:motor_joint motor_num="1" parent="holder_1" origin="0.0 -0.02 -0.015" />
 
 </robot>

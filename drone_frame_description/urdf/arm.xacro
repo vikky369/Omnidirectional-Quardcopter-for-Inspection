@@ -1,233 +1,62 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro">
 
+<xacro:macro name="arm" params="arm_num io vco ixx iyy izz ixy iyz ixz">
+  <link name="arm_${arm_num}">
+    <inertial>
+      <origin xyz="${io}" rpy="0 0 0"/>
+      <mass value="0.15422742956922936"/>
+      <inertia ixx="${ixx}" iyy="${iyy}" izz="${izz}" ixy="${ixy}" iyz="${iyz}" ixz="${ixz}"/>
+    </inertial>
+    <visual>
+      <origin xyz="${vco}" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="file://$(find drone_frame_description)/meshes/arm_${arm_num}_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="black"/>
+    </visual>
+    <collision>
+      <origin xyz="${vco}" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="file://$(find drone_frame_description)/meshes/arm_${arm_num}_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+</xacro:macro>
 
-<link name="arm_8_1">
-  <inertial>
-    <origin xyz="-0.0973299825380552 2.527436940291672e-11 -0.08302889455495804" rpy="0 0 0"/>
-    <mass value="0.15422742956922936"/>
-    <inertia ixx="0.0006" iyy="0.000929" izz="0.000389" ixy="0.0" iyz="0.0" ixz="-0.000277"/>
-  </inertial>
-  <visual>
-    <origin xyz="0.2 -0.02 0.055" rpy="0 0 0"/>
-    <geometry>
-      <mesh filename="file://$(find drone_frame_description)/meshes/arm_8_1.stl" scale="0.001 0.001 0.001"/>
-    </geometry>
-    <material name="black"/>
-  </visual>
-  <collision>
-    <origin xyz="0.2 -0.02 0.055" rpy="0 0 0"/>
-    <geometry>
-      <mesh filename="file://$(find drone_frame_description)/meshes/arm_8_1.stl" scale="0.001 0.001 0.001"/>
-    </geometry>
-  </collision>
-</link>
+<xacro:arm arm_num="8" io="-0.0973299825380552 2.527436940291672e-11 -0.08302889455495804" vco="0.2 -0.02 0.055" 
+        ixx="0.0006" iyy="0.000929" izz="0.000389" ixy="0.0" iyz="0.0" ixz="-0.000277" />
+<xacro:arm arm_num="7" io="-0.08302889455495802 -2.527437287236367e-11 -0.0973299825380552" vco="0.055 -0.02 0.2" 
+        ixx="0.000389" iyy="0.000929" izz="0.0006" ixy="-0.0" iyz="-0.0" ixz="-0.000277" />
+<xacro:arm arm_num="6" io="0.09732998253805486 2.5274376341810623e-11 0.08302889455495802" vco="-0.2 -0.02 -0.055" 
+        ixx="0.0006" iyy="0.000929" izz="0.000389" ixy="-0.0" iyz="-0.0" ixz="-0.000277" />
+<xacro:arm arm_num="5" io="0.08302889455495802 -2.527437287236367e-11 0.0973299825380552" vco="-0.055 -0.02 -0.2" 
+        ixx="0.000389" iyy="0.000929" izz="0.0006" ixy="0.0" iyz="0.0" ixz="-0.000277" />
+<xacro:arm arm_num="4" io="0.0973299825380552 -2.527437287236367e-11 -0.08302889455495804" vco="-0.2 -0.02 0.055" 
+        ixx="0.0006" iyy="0.000929" izz="0.000389" ixy="0.0" iyz="-0.0" ixz="0.000277"/>
+<xacro:arm arm_num="3" io="0.08302889455495802 2.527436940291672e-11 -0.0973299825380552" vco="-0.055 -0.02 0.2" 
+        ixx="0.000389" iyy="0.000929" izz="0.0006" ixy="-0.0" iyz="0.0" ixz="0.000277" />
+<xacro:arm arm_num="2" io="-0.09732998253804703 -2.5274383280704527e-11 0.08302889455496801" vco="0.2 -0.02 -0.055" 
+        ixx="0.0006" iyy="0.000929" izz="0.000389" ixy="-0.0" iyz="0.0" ixz="0.000277" />
+<xacro:arm arm_num="1" io="-0.08302889455495796 2.5278622944879814e-11 0.0973299825380552" vco="0.055 -0.02 -0.2" 
+        ixx="0.000389" iyy="0.000929" izz="0.0006" ixy="0.0" iyz="-0.0" ixz="0.000277" />
 
-<link name="arm_7_1">
-  <inertial>
-    <origin xyz="-0.08302889455495802 -2.527437287236367e-11 -0.0973299825380552" rpy="0 0 0"/>
-    <mass value="0.15422742956922936"/>
-    <inertia ixx="0.000389" iyy="0.000929" izz="0.0006" ixy="-0.0" iyz="-0.0" ixz="-0.000277"/>
-  </inertial>
-  <visual>
-    <origin xyz="0.055 -0.02 0.2" rpy="0 0 0"/>
-    <geometry>
-      <mesh filename="file://$(find drone_frame_description)/meshes/arm_7_1.stl" scale="0.001 0.001 0.001"/>
-    </geometry>
-    <material name="black"/>
-  </visual>
-  <collision>
-    <origin xyz="0.055 -0.02 0.2" rpy="0 0 0"/>
-    <geometry>
-      <mesh filename="file://$(find drone_frame_description)/meshes/arm_7_1.stl" scale="0.001 0.001 0.001"/>
-    </geometry>
-  </collision>
-</link>
+<xacro:macro name="arm_joint" params="arm_num origin axis">
+  <joint name="arm_joint_${arm_num}" type="fixed">
+    <origin xyz="${origin}" rpy="0 0 0"/>
+    <parent link="base_link"/>
+    <child link="arm_${arm_num}"/>
+    <axis xyz="{axis}"/>
+  </joint>
+</xacro:macro>
 
-<link name="arm_6_1">
-  <inertial>
-    <origin xyz="0.09732998253805486 2.5274376341810623e-11 0.08302889455495802" rpy="0 0 0"/>
-    <mass value="0.15422742956922936"/>
-    <inertia ixx="0.0006" iyy="0.000929" izz="0.000389" ixy="-0.0" iyz="-0.0" ixz="-0.000277"/>
-  </inertial>
-  <visual>
-    <origin xyz="-0.2 -0.02 -0.055" rpy="0 0 0"/>
-    <geometry>
-      <mesh filename="file://$(find drone_frame_description)/meshes/arm_6_1.stl" scale="0.001 0.001 0.001"/>
-    </geometry>
-    <material name="black"/>
-  </visual>
-  <collision>
-    <origin xyz="-0.2 -0.02 -0.055" rpy="0 0 0"/>
-    <geometry>
-      <mesh filename="file://$(find drone_frame_description)/meshes/arm_6_1.stl" scale="0.001 0.001 0.001"/>
-    </geometry>
-  </collision>
-</link>
-
-<link name="arm_5_1">
-  <inertial>
-    <origin xyz="0.08302889455495802 -2.527437287236367e-11 0.0973299825380552" rpy="0 0 0"/>
-    <mass value="0.15422742956922936"/>
-    <inertia ixx="0.000389" iyy="0.000929" izz="0.0006" ixy="0.0" iyz="0.0" ixz="-0.000277"/>
-  </inertial>
-  <visual>
-    <origin xyz="-0.055 -0.02 -0.2" rpy="0 0 0"/>
-    <geometry>
-      <mesh filename="file://$(find drone_frame_description)/meshes/arm_5_1.stl" scale="0.001 0.001 0.001"/>
-    </geometry>
-    <material name="black"/>
-  </visual>
-  <collision>
-    <origin xyz="-0.055 -0.02 -0.2" rpy="0 0 0"/>
-    <geometry>
-      <mesh filename="file://$(find drone_frame_description)/meshes/arm_5_1.stl" scale="0.001 0.001 0.001"/>
-    </geometry>
-  </collision>
-</link>
-
-<link name="arm_4_1">
-  <inertial>
-    <origin xyz="0.0973299825380552 -2.527437287236367e-11 -0.08302889455495804" rpy="0 0 0"/>
-    <mass value="0.15422742956922936"/>
-    <inertia ixx="0.0006" iyy="0.000929" izz="0.000389" ixy="0.0" iyz="-0.0" ixz="0.000277"/>
-  </inertial>
-  <visual>
-    <origin xyz="-0.2 -0.02 0.055" rpy="0 0 0"/>
-    <geometry>
-      <mesh filename="file://$(find drone_frame_description)/meshes/arm_4_1.stl" scale="0.001 0.001 0.001"/>
-    </geometry>
-    <material name="black"/>
-  </visual>
-  <collision>
-    <origin xyz="-0.2 -0.02 0.055" rpy="0 0 0"/>
-    <geometry>
-      <mesh filename="file://$(find drone_frame_description)/meshes/arm_4_1.stl" scale="0.001 0.001 0.001"/>
-    </geometry>
-  </collision>
-</link>
-
-<link name="arm_3_1">
-  <inertial>
-    <origin xyz="0.08302889455495802 2.527436940291672e-11 -0.0973299825380552" rpy="0 0 0"/>
-    <mass value="0.15422742956922936"/>
-    <inertia ixx="0.000389" iyy="0.000929" izz="0.0006" ixy="-0.0" iyz="0.0" ixz="0.000277"/>
-  </inertial>
-  <visual>
-    <origin xyz="-0.055 -0.02 0.2" rpy="0 0 0"/>
-    <geometry>
-      <mesh filename="file://$(find drone_frame_description)/meshes/arm_3_1.stl" scale="0.001 0.001 0.001"/>
-    </geometry>
-    <material name="black"/>
-  </visual>
-  <collision>
-    <origin xyz="-0.055 -0.02 0.2" rpy="0 0 0"/>
-    <geometry>
-      <mesh filename="file://$(find drone_frame_description)/meshes/arm_3_1.stl" scale="0.001 0.001 0.001"/>
-    </geometry>
-  </collision>
-</link>
-
-<link name="arm_2_1">
-  <inertial>
-    <origin xyz="-0.09732998253804703 -2.5274383280704527e-11 0.08302889455496801" rpy="0 0 0"/>
-    <mass value="0.15422742956922936"/>
-    <inertia ixx="0.0006" iyy="0.000929" izz="0.000389" ixy="-0.0" iyz="0.0" ixz="0.000277"/>
-  </inertial>
-  <visual>
-    <origin xyz="0.2 -0.02 -0.055" rpy="0 0 0"/>
-    <geometry>
-      <mesh filename="file://$(find drone_frame_description)/meshes/arm_2_1.stl" scale="0.001 0.001 0.001"/>
-    </geometry>
-    <material name="black"/>
-  </visual>
-  <collision>
-    <origin xyz="0.2 -0.02 -0.055" rpy="0 0 0"/>
-    <geometry>
-      <mesh filename="file://$(find drone_frame_description)/meshes/arm_2_1.stl" scale="0.001 0.001 0.001"/>
-    </geometry>
-  </collision>
-</link>
-
-<link name="arm_1_1">
-  <inertial>
-    <origin xyz="-0.08302889455495796 2.5278622944879814e-11 0.0973299825380552" rpy="0 0 0"/>
-    <mass value="0.15422742956922936"/>
-    <inertia ixx="0.000389" iyy="0.000929" izz="0.0006" ixy="0.0" iyz="-0.0" ixz="0.000277"/>
-  </inertial>
-  <visual>
-    <origin xyz="0.055 -0.02 -0.2" rpy="0 0 0"/>
-    <geometry>
-      <mesh filename="file://$(find drone_frame_description)/meshes/arm_1_1.stl" scale="0.001 0.001 0.001"/>
-    </geometry>
-    <material name="black"/>
-  </visual>
-  <collision>
-    <origin xyz="0.055 -0.02 -0.2" rpy="0 0 0"/>
-    <geometry>
-      <mesh filename="file://$(find drone_frame_description)/meshes/arm_1_1.stl" scale="0.001 0.001 0.001"/>
-    </geometry>
-  </collision>
-</link>
-
-<!-- joints from base link to arms -->
-<joint name="rigid_1" type="fixed">
-  <origin xyz="-0.2 0.02 -0.055" rpy="0 0 0"/>
-  <parent link="base_link"/>
-  <child link="arm_8_1"/>
-  <axis xyz="0.0 0.0 1.0"/>
-</joint>
-
-<joint name="rigid_2" type="fixed">
-  <origin xyz="-0.055 0.02 -0.2" rpy="0 0 0"/>
-  <parent link="base_link"/>
-  <child link="arm_7_1"/>
-  <axis xyz="1.0 0.0 0.0"/>
-</joint>
-
-<joint name="rigid_3" type="fixed">
-  <origin xyz="0.2 0.02 0.055" rpy="0 0 0"/>
-  <parent link="base_link"/>
-  <child link="arm_6_1"/>
-  <axis xyz="0.0 0.0 1.0"/>
-</joint>
-
-<joint name="rigid_4" type="fixed">
-  <origin xyz="0.055 0.02 0.2" rpy="0 0 0"/>
-  <parent link="base_link"/>
-  <child link="arm_5_1"/>
-  <axis xyz="1.0 0.0 0.0"/>
-</joint>
-
-<joint name="rigid_5" type="fixed">
-  <origin xyz="0.2 0.02 -0.055" rpy="0 0 0"/>
-  <parent link="base_link"/>
-  <child link="arm_4_1"/>
-  <axis xyz="0.0 0.0 1.0"/> 
-</joint>
-
-<joint name="rigid_6" type="fixed">
-  <origin xyz="0.055 0.02 -0.2" rpy="0 0 0"/>
-  <parent link="base_link"/>
-  <child link="arm_3_1"/>
-  <axis xyz="1.0 0.0 0.0"/>
-</joint>
-
-<joint name="rigid_7" type="fixed">
-  <origin xyz="-0.2 0.02 0.055" rpy="0 0 0"/>
-  <parent link="base_link"/>
-  <child link="arm_2_1"/>
-  <axis xyz="0.0 0.0 1.0"/>
-</joint>
-
-<joint name="rigid_8" type="fixed">
-  <origin xyz="-0.055 0.02 0.2" rpy="0 0 0"/>
-  <parent link="base_link"/>
-  <child link="arm_1_1"/>
-  <axis xyz="1.0 0.0 0.0"/>
-</joint>
-
-
-
+<xacro:arm_joint arm_num="8" origin="-0.2 0.02 -0.055" axis="0.0 0.0 1.0" />
+<xacro:arm_joint arm_num="7" origin="-0.055 0.02 -0.2" axis="1.0 0.0 0.0" />
+<xacro:arm_joint arm_num="6" origin="0.2 0.02 0.055" axis="0.0 0.0 1.0" />
+<xacro:arm_joint arm_num="5" origin="0.055 0.02 0.2" axis="1.0 0.0 0.0" />
+<xacro:arm_joint arm_num="4" origin="0.2 0.02 -0.055" axis="0.0 0.0 1.0" />
+<xacro:arm_joint arm_num="3" origin="0.055 0.02 -0.2" axis="1.0 0.0 0.0" />
+<xacro:arm_joint arm_num="2" origin="-0.2 0.02 0.055" axis="0.0 0.0 1.0" />
+<xacro:arm_joint arm_num="1" origin="-0.055 0.02 0.2" axis="1.0 0.0 0.0" />
 
 </robot>
