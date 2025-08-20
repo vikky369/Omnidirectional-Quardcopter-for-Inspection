@@ -1,4 +1,4 @@
-## Ign Fortress Gazebo Dependency Installation
+## Ign Fortress Gazebo Basic Installation
 
 sudo apt install ros-humble-ros-gz
 
