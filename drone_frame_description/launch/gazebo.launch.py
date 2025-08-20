@@ -20,7 +20,7 @@ def generate_launch_description():
     # Parse robot description from xacro
     robot_description_file = os.path.join(pkg_ros_gz_rbot, 'urdf', 'drone_frame.xacro')
     ros_gz_bridge_config = os.path.join(pkg_ros_gz_rbot, 'config', 'ros_gz_bridge_gazebo.yaml')
-    
+
     robot_description_config = xacro.process_file(
         robot_description_file
     )
@@ -61,15 +61,16 @@ def generate_launch_description():
         output='screen',
     )
 
+
     # Bridge ROS topics and Gazebo messages for establishing communication
     start_gazebo_ros_bridge_cmd = Node(
         package='ros_gz_bridge',
         executable='parameter_bridge',
-        parameters=[{
-          'config_file': ros_gz_bridge_config,
-        }],
+        parameters=[ros_gz_bridge_config],
         output='screen'
-      )      
+      )    
+
+ 
 
     # Add a longer delay before spawning to ensure everything is ready
     delayed_spawn = TimerAction(

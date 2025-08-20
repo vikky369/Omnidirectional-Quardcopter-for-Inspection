@@ -51,4 +51,31 @@
 <xacro:thruster_joint prop_num="2" parent_link="motor_3" child_link="thruster_2" axis="-0.0 1.0 -0.0" y="-0.026"/>
 <xacro:thruster_joint prop_num="1" parent_link="motor_2" child_link="thruster_1" axis="0.0 1.0 0.0" y="-0.026"/>
 
+<xacro:macro name="thruster_plugin" params="prop_num direction">
+  <gazebo>
+    <plugin filename="libignition-gazebo-thruster-system.so" name="ignition::gazebo::systems::Thruster">
+      <namespace>drone_frame</namespace>
+      <joint_name>thruster_joint_${prop_num}</joint_name>
+      <topic>thruster_${prop_num}/cmd</topic>
+      <thrust_coefficient>0.015</thrust_coefficient>
+      <fluid_density>1.225</fluid_density>
+      <propeller_diameter>0.2286</propeller_diameter>
+      <velocity_control>true</velocity_control>
+      <use_angvel_cmd>false</use_angvel_cmd>
+      <max_thrust_cmd>40</max_thrust_cmd>
+      <min_thrust_cmd>-40</min_thrust_cmd>
+      <direction>${direction}</direction>
+    </plugin>
+  </gazebo>
+</xacro:macro>
+
+<xacro:thruster_plugin prop_num="1" direction="cw"/>
+<xacro:thruster_plugin prop_num="2" direction="ccw"/>
+<xacro:thruster_plugin prop_num="3" direction="ccw"/>
+<xacro:thruster_plugin prop_num="4" direction="cw"/>
+<xacro:thruster_plugin prop_num="5" direction="ccw"/>
+<xacro:thruster_plugin prop_num="6" direction="cw"/>
+<xacro:thruster_plugin prop_num="7" direction="ccw"/>
+<xacro:thruster_plugin prop_num="8" direction="cw"/>
+
 </robot>

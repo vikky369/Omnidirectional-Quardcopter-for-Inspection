@@ -1,0 +1,48 @@
+thruster_1/cmd:
+    type: std_msgs/Float64
+    thrust:
+        min: -40
+        max: 40
+        to: data
+thruster_2/cmd:
+    type: std_msgs/Float64
+    thrust:
+        min: -40
+        max: 40
+        to: data
+thruster_3/cmd:
+    type: std_msgs/Float64
+    thrust:
+        min: -40
+        max: 40
+        to: data
+thruster_4/cmd:
+    type: std_msgs/Float64
+    thrust:
+        min: -40
+        max: 40
+        to: data
+thruster_5/cmd:
+    type: std_msgs/Float64
+    thrust:
+        min: -40
+        max: 40
+        to: data
+thruster_6/cmd:
+    type: std_msgs/Float64
+    thrust:
+        min: -40
+        max: 40
+        to: data
+thruster_7/cmd:
+    type: std_msgs/Float64
+    thrust:
+        min: -40
+        max: 40
+        to: data
+thruster_8/cmd:
+    type: std_msgs/Float64
+    thrust:
+        min: -40
+        max: 40
+        to: data
