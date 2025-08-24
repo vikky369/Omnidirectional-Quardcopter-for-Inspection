@@ -1,0 +1,58 @@
+# Cascaded PID Configuration for Drone Stability
+# Gains per axis: x, y, z, roll, pitch, yaw
+
+# Position control gains
+x:
+  Kp: 2.0      # Position proportional gain
+  Ki: 0.1      # Position integral gain  
+  Kd: 0.5      # Position derivative gain
+  Kv: 1.0      # Velocity gain
+  u_sat: 20.0  # Force saturation (N)
+  v_sat: 2.0   # Velocity saturation (m/s)
+  use_position: true
+
+y:
+  Kp: 2.0
+  Ki: 0.1
+  Kd: 0.5
+  Kv: 1.0
+  u_sat: 20.0
+  v_sat: 2.0
+  use_position: true
+
+z:
+  Kp: 3.0      # Higher gain for altitude control
+  Ki: 0.2
+  Kd: 1.0
+  Kv: 1.5
+  u_sat: 30.0  # Higher thrust for vertical movement
+  v_sat: 1.5
+  use_position: true
+
+# Attitude control gains
+roll:
+  Kp: 5.0      # Higher gains for attitude stability
+  Ki: 0.1
+  Kd: 1.0
+  Kv: 2.0
+  u_sat: 10.0  # Torque saturation (Nm)
+  v_sat: 3.14  # Angular velocity saturation (rad/s)
+  use_position: true
+
+pitch:
+  Kp: 5.0
+  Ki: 0.1
+  Kd: 1.0
+  Kv: 2.0
+  u_sat: 10.0
+  v_sat: 3.14
+  use_position: true
+
+yaw:
+  Kp: 3.0      # Slightly lower for yaw stability
+  Ki: 0.05
+  Kd: 0.8
+  Kv: 1.5
+  u_sat: 8.0
+  v_sat: 2.0
+  use_position: true

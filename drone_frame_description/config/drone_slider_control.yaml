@@ -1,0 +1,68 @@
+# Slider Publisher Configuration for Drone Manual Control
+cmd_pose:
+    type: geometry_msgs/PoseStamped
+    header.frame_id: 'world'
+    x:
+        min: -10
+        max: 10
+        default: 0
+        to: pose.position.x
+    y:
+        min: -10
+        max: 10
+        default: 0
+        to: pose.position.y
+    z:
+        min: 0
+        max: 10
+        default: 5
+        to: pose.position.z
+    roll:
+        min: -0.5
+        max: 0.5
+        default: 0
+        to: pose.orientation.roll
+    pitch:
+        min: -0.5
+        max: 0.5
+        default: 0
+        to: pose.orientation.pitch
+    yaw:
+        min: -pi
+        max: pi
+        default: 0
+        to: pose.orientation.yaw
+
+cmd_vel:
+    type: geometry_msgs/TwistStamped
+    header.frame_id: 'base_link'
+    vx:
+        min: -2
+        max: 2
+        default: 0
+        to: twist.linear.x
+    vy:
+        min: -2
+        max: 2
+        default: 0
+        to: twist.linear.y
+    vz:
+        min: -1
+        max: 1
+        default: 0
+        to: twist.linear.z
+    wx:
+        min: -1
+        max: 1
+        default: 0
+        to: twist.angular.x
+    wy:
+        min: -1
+        max: 1
+        default: 0
+        to: twist.angular.y
+    wz:
+        min: -1
+        max: 1
+        default: 0
+        to: twist.angular.z

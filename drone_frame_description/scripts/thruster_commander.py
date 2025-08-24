@@ -9,12 +9,12 @@ class ThrusterCommander(Node):
 
         # Publishers for all 8 thrusters
         self.thruster_pubs = [
-            self.create_publisher(Float64, f'/model/drone_frame/thruster_{i}/cmd', 10)
-            for i in range(5, 9)
+            self.create_publisher(Float64, f'/thruster_{i}/command', 10)
+            for i in range(1, 9)
         ]
 
-        # Fixed thrust value
-        self.thrust_value = 200.0
+        # Fixed thrust value for 10kg drone hover
+        self.thrust_value = 5000.0
 
         # Timer: publish at 10 Hz
         self.timer = self.create_timer(0.1, self.publish_thrust)

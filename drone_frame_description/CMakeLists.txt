@@ -26,6 +26,10 @@ install(FILES package.xml
 
 install(PROGRAMS
   scripts/thruster_commander.py
+  scripts/thruster_command_mapper.py
+  scripts/drone_odometry_publisher.py
+  scripts/test_drone_control.py
+  scripts/stop_all_motors.py
   DESTINATION lib/${PROJECT_NAME}
 )
 

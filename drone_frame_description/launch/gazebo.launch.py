@@ -69,17 +69,9 @@ def generate_launch_description():
             Node(
                 package='ros_gz_bridge',
                 executable='parameter_bridge',
-                arguments=[
-                            "/world/default/clock@rosgraph_msgs/msg/Clock@gz.msgs.Clock",
-                            "/model/drone_frame/thruster_1/cmd@std_msgs/msg/Float64@gz.msgs.Double",
-                            "/model/drone_frame/thruster_2/cmd@std_msgs/msg/Float64@gz.msgs.Double",
-                            "/model/drone_frame/thruster_3/cmd@std_msgs/msg/Float64@gz.msgs.Double",
-                            "/model/drone_frame/thruster_4/cmd@std_msgs/msg/Float64@gz.msgs.Double",
-                            "/model/drone_frame/thruster_5/cmd@std_msgs/msg/Float64@gz.msgs.Double",
-                            "/model/drone_frame/thruster_6/cmd@std_msgs/msg/Float64@gz.msgs.Double",
-                            "/model/drone_frame/thruster_7/cmd@std_msgs/msg/Float64@gz.msgs.Double",
-                            "/model/drone_frame/thruster_8/cmd@std_msgs/msg/Float64@gz.msgs.Double",
-                ],
+                parameters=[{
+                    'config_file': ros_gz_bridge_config,
+                }],
                 output='screen'
             )
         ]

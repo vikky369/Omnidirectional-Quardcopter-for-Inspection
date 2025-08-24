@@ -53,20 +53,27 @@
 
 <xacro:macro name="thruster_plugin" params="prop_num direction">
   <gazebo>
-    <plugin filename="libignition-gazebo-thruster-system.so" name="ignition::gazebo::systems::Thruster">
-      <namespace>drone_frame</namespace>
-      <joint_name>thruster_joint_${prop_num}</joint_name>
-      <topic>thruster_${prop_num}/cmd</topic>
-      <thrust_coefficient>0.125</thrust_coefficient>
-      <fluid_density>1.225</fluid_density>
-      <propeller_diameter>0.2286</propeller_diameter>
-      <velocity_control>true</velocity_control>
-      <use_angvel_cmd>false</use_angvel_cmd>
-      <max_thrust_cmd>200</max_thrust_cmd>
-      <min_thrust_cmd>-200</min_thrust_cmd>
-      <direction>${direction}</direction>
+    <plugin filename="ignition-gazebo-multicopter-motor-model-system"
+      name="gz::sim::systems::MulticopterMotorModel">
+      <robotNamespace>drone_frame</robotNamespace>
+      <jointName>thruster_joint_${prop_num}</jointName>
+      <linkName>thruster_${prop_num}</linkName>
+      <turningDirection>${direction}</turningDirection>
+      <timeConstantUp>0.0125</timeConstantUp>
+      <timeConstantDown>0.025</timeConstantDown>
+      <maxRotVelocity>8000.0</maxRotVelocity>
+      <motorConstant>8.54858e-05</motorConstant>
+      <momentConstant>0.06</momentConstant>
+      <commandSubTopic>rotors/command/motor_speed</commandSubTopic>
+      <motorNumber>${prop_num - 1}</motorNumber>
+      <rotorDragCoefficient>2.5e-04</rotorDragCoefficient>
+      <rollingMomentCoefficient>1e-06</rollingMomentCoefficient>
+      <motorSpeedPubTopic>thruster_${prop_num}/cmd</motorSpeedPubTopic>
+      <rotorVelocitySlowdownSim>10</rotorVelocitySlowdownSim>
+      <motorType>velocity</motorType>
     </plugin>
   </gazebo>
+
 </xacro:macro>
 
 <xacro:thruster_plugin prop_num="1" direction="cw"/>
