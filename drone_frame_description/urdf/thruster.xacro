@@ -73,7 +73,6 @@
       <motorType>velocity</motorType>
     </plugin>
   </gazebo>
-
 </xacro:macro>
 
 <xacro:thruster_plugin prop_num="1" direction="cw"/>
