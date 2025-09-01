@@ -20,6 +20,7 @@ def generate_launch_description():
     # Parse robot description from xacro
     robot_description_file = os.path.join(pkg_ros_gz_rbot, 'urdf', 'drone_frame.xacro')
     ros_gz_bridge_config = os.path.join(pkg_ros_gz_rbot, 'config', 'ros_gz_bridge_gazebo.yaml')
+    robot_World_file = os.path.join(pkg_ros_gz_rbot, 'worlds', 'Omnicopter.sdf')
 
     robot_description_config = xacro.process_file(
         robot_description_file
@@ -39,7 +40,7 @@ def generate_launch_description():
     gazebo = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(join(pkg_ros_gz_sim, "launch", "gz_sim.launch.py")),
         launch_arguments={
-            "gz_args" : '-r -v 4 empty.sdf'
+            "gz_args" : f"-r -v 4 {robot_World_file}"
         }.items()
     )
 

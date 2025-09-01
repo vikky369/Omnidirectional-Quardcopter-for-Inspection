@@ -25,7 +25,7 @@
   </collision>
 </link>
 
-<link name="controller">
+<!-- <link name="controller">
   <inertial>
     <origin xyz="0.029999999999999964 0.0075 -0.08999999999999991" rpy="0 0 0"/>
     <mass value="0.471"/>
@@ -185,7 +185,7 @@
   <origin xyz="0.0 0.02 0.15" rpy="0 0 0"/>
   <parent link="base_link"/>
   <child link="testing_probe"/>
-</joint>
+</joint> -->
 
 <xacro:include filename="$(find drone_frame_description)/urdf/arm.xacro" />
 <xacro:include filename="$(find drone_frame_description)/urdf/coaxial_holder.xacro" />

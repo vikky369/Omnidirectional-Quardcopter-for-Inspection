@@ -16,6 +16,8 @@ install(DIRECTORY
   meshes
   launch
   config
+  worlds
+  models
   DESTINATION share/${PROJECT_NAME}
 )
 
@@ -28,6 +30,7 @@ install(PROGRAMS
   scripts/thruster_commander.py
   DESTINATION lib/${PROJECT_NAME}
 )
+
 
 # Install resource files
 install(FILES resource/${PROJECT_NAME}
