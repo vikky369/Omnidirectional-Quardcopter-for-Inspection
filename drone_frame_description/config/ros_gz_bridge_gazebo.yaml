@@ -10,49 +10,65 @@
   direction: ROS_TO_GZ
 
 - ros_topic_name: "/thruster_1/force_torque"
-  gz_topic_name:  "/world/default/model/drone_frame/link/thruster_1/sensor/thruster_force_torque_1/force_torque"
+  gz_topic_name:  "/thruster_1_ft"
   ros_type_name:  "geometry_msgs/msg/WrenchStamped"
-  gz_type_name:   "gz.msgs.Wrench"
-  direction: BIDIRECTIONAL
+  gz_type_name: "ignition.msgs.Wrench"
+  direction: GZ_TO_ROS
+  lazy: false
+
 
 - ros_topic_name: "/thruster_2/force_torque"
-  gz_topic_name:  "/world/default/model/drone_frame/link/thruster_2/sensor/thruster_force_torque_2/force_torque"
+  gz_topic_name:  "/thruster_2_ft"
   ros_type_name:  "geometry_msgs/msg/WrenchStamped"
-  gz_type_name:   "gz.msgs.Wrench"
-  direction: BIDIRECTIONAL
+  gz_type_name: "ignition.msgs.Wrench"
+  direction: GZ_TO_ROS
+  lazy: false
+
 
 - ros_topic_name: "/thruster_3/force_torque"
-  gz_topic_name:  "/world/default/model/drone_frame/link/thruster_3/sensor/thruster_force_torque_3/force_torque"
+  gz_topic_name:  "/thruster_3_ft"
   ros_type_name:  "geometry_msgs/msg/WrenchStamped"
-  gz_type_name:   "gz.msgs.Wrench"
-  direction: BIDIRECTIONAL
+  gz_type_name: "ignition.msgs.Wrench"
+  direction: GZ_TO_ROS
+  lazy: false
+
 
 - ros_topic_name: "/thruster_4/force_torque"
-  gz_topic_name:  "/world/default/model/drone_frame/link/thruster_4/sensor/thruster_force_torque_4/force_torque"
+  gz_topic_name:  "/thruster_4_ft"
   ros_type_name:  "geometry_msgs/msg/WrenchStamped"
-  gz_type_name:   "gz.msgs.Wrench"
-  direction: BIDIRECTIONAL
+  gz_type_name: "ignition.msgs.Wrench"
+  direction: GZ_TO_ROS
+  lazy: false
+
 
 - ros_topic_name: "/thruster_5/force_torque"
-  gz_topic_name:  "/world/default/model/drone_frame/link/thruster_5/sensor/thruster_force_torque_5/force_torque"
+  gz_topic_name:  "/thruster_5_ft"
   ros_type_name:  "geometry_msgs/msg/WrenchStamped"
-  gz_type_name:   "gz.msgs.Wrench"
-  direction: BIDIRECTIONAL
+  gz_type_name: "ignition.msgs.Wrench"
+  direction: GZ_TO_ROS
+  lazy: false
+
 
 - ros_topic_name: "/thruster_6/force_torque"
-  gz_topic_name:  "/world/default/model/drone_frame/link/thruster_6/sensor/thruster_force_torque_6/force_torque"
+  gz_topic_name:  "/thruster_6_ft"
   ros_type_name:  "geometry_msgs/msg/WrenchStamped"
-  gz_type_name:   "gz.msgs.Wrench"
-  direction: BIDIRECTIONAL
+  gz_type_name: "ignition.msgs.Wrench"
+  direction: GZ_TO_ROS
+  lazy: false
+
 
 - ros_topic_name: "/thruster_7/force_torque"
-  gz_topic_name:  "/world/default/model/drone_frame/link/thruster_7/sensor/thruster_force_torque_7/force_torque"
+  gz_topic_name:  "/thruster_7_ft"
   ros_type_name:  "geometry_msgs/msg/WrenchStamped"
-  gz_type_name:   "gz.msgs.Wrench"
-  direction: BIDIRECTIONAL
+  gz_type_name: "ignition.msgs.Wrench"
+  direction: GZ_TO_ROS
+  lazy: false
+
 
 - ros_topic_name: "/thruster_8/force_torque"
-  gz_topic_name:  "/world/default/model/drone_frame/link/thruster_8/sensor/thruster_force_torque_8/force_torque"
+  gz_topic_name:  "/thruster_8_ft"
   ros_type_name:  "geometry_msgs/msg/WrenchStamped"
-  gz_type_name:   "gz.msgs.Wrench"
-  direction: BIDIRECTIONAL
+  gz_type_name: "ignition.msgs.Wrench"
+  direction: GZ_TO_ROS
+  lazy: false
+

@@ -20,7 +20,7 @@ def generate_launch_description():
     # Parse robot description from xacro
     robot_description_file = os.path.join(pkg_ros_gz_rbot, 'urdf', 'drone_frame.xacro')
     ros_gz_bridge_config = os.path.join(pkg_ros_gz_rbot, 'config', 'ros_gz_bridge_gazebo.yaml')
-    robot_World_file = os.path.join(pkg_ros_gz_rbot, 'worlds', 'Omnicopter.sdf')
+    robot_World_file = os.path.join(pkg_ros_gz_rbot, 'worlds', 'omnicopter.sdf')
 
     robot_description_config = xacro.process_file(
         robot_description_file

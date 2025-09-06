@@ -23,18 +23,20 @@
     </collision>
   </link>
 
-  <gazebo reference="thruster_${prop_num}">
+  <gazebo reference="thruster_joint_${prop_num}">
     <sensor name="thruster_force_torque_${prop_num}" type="force_torque">
       <always_on>true</always_on>
       <update_rate>100</update_rate>
+      <topic>thruster_${prop_num}_ft</topic>
       <visualize>true</visualize>
-      <topic>thruster_${prop_num}/force_torque</topic>
       <force_torque>
         <frame>child</frame>
         <measure_direction>child_to_parent</measure_direction>
       </force_torque>
+      <plugin name="ignition::gazebo::systems::ForceTorque" filename="libignition-gazebo-forcetorque-system.so"/>
     </sensor>
   </gazebo>
+
 </xacro:macro>
 
 <xacro:thruster prop_num="1" vco="0.2 0.026 -0.2" mesh_file="prop_1_1"/>
