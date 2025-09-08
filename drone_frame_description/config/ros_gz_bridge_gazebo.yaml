@@ -3,19 +3,21 @@
   ros_type_name: "rosgraph_msgs/msg/Clock"
   gz_type_name: "gz.msgs.Clock"
   direction: GZ_TO_ROS
+
+# Motor Speed Command
 - ros_topic_name: "/rotors/command/motor_speed"
   gz_topic_name: "/drone_frame/rotors/command/motor_speed"
   ros_type_name: "actuator_msgs/msg/Actuators"
   gz_type_name: "ignition.msgs.Actuators"
   direction: ROS_TO_GZ
 
+# Thruster Force/Torque
 - ros_topic_name: "/thruster_1/force_torque"
   gz_topic_name:  "/thruster_1_ft"
   ros_type_name:  "geometry_msgs/msg/WrenchStamped"
   gz_type_name: "ignition.msgs.Wrench"
   direction: GZ_TO_ROS
   lazy: false
-
 
 - ros_topic_name: "/thruster_2/force_torque"
   gz_topic_name:  "/thruster_2_ft"
@@ -24,14 +26,12 @@
   direction: GZ_TO_ROS
   lazy: false
 
-
 - ros_topic_name: "/thruster_3/force_torque"
   gz_topic_name:  "/thruster_3_ft"
   ros_type_name:  "geometry_msgs/msg/WrenchStamped"
   gz_type_name: "ignition.msgs.Wrench"
   direction: GZ_TO_ROS
   lazy: false
-
 
 - ros_topic_name: "/thruster_4/force_torque"
   gz_topic_name:  "/thruster_4_ft"
@@ -40,14 +40,12 @@
   direction: GZ_TO_ROS
   lazy: false
 
-
 - ros_topic_name: "/thruster_5/force_torque"
   gz_topic_name:  "/thruster_5_ft"
   ros_type_name:  "geometry_msgs/msg/WrenchStamped"
   gz_type_name: "ignition.msgs.Wrench"
   direction: GZ_TO_ROS
   lazy: false
-
 
 - ros_topic_name: "/thruster_6/force_torque"
   gz_topic_name:  "/thruster_6_ft"
@@ -56,14 +54,12 @@
   direction: GZ_TO_ROS
   lazy: false
 
-
 - ros_topic_name: "/thruster_7/force_torque"
   gz_topic_name:  "/thruster_7_ft"
   ros_type_name:  "geometry_msgs/msg/WrenchStamped"
   gz_type_name: "ignition.msgs.Wrench"
   direction: GZ_TO_ROS
   lazy: false
-
 
 - ros_topic_name: "/thruster_8/force_torque"
   gz_topic_name:  "/thruster_8_ft"
@@ -72,3 +68,33 @@
   direction: GZ_TO_ROS
   lazy: false
 
+# IMU
+- ros_topic_name: "/imu/data"
+  gz_topic_name: "/model/drone_frame/controller/imu_sensor/imu_data"
+  ros_type_name: "sensor_msgs/msg/Imu"
+  gz_type_name: "ignition.msgs.Imu"
+  direction: GZ_TO_ROS
+  lazy: false
+
+# GPS
+- ros_topic_name: "/gps/fix"
+  gz_topic_name: "/model/drone_frame/gps/gps_sensor/gps"
+  ros_type_name: "sensor_msgs/msg/NavSatFix"
+  gz_type_name: "ignition.msgs.Gps"
+  direction: GZ_TO_ROS
+  lazy: false
+
+# Camera
+- ros_topic_name: "/camera/image_raw"
+  gz_topic_name: "/model/drone_frame/camera/camera_front/image"
+  ros_type_name: "sensor_msgs/msg/Image"
+  gz_type_name: "ignition.msgs.Image"
+  direction: GZ_TO_ROS
+  lazy: false
+
+- ros_topic_name: "/camera/camera_info"
+  gz_topic_name: "/model/drone_frame/camera/camera_front/camera_info"
+  ros_type_name: "sensor_msgs/msg/CameraInfo"
+  gz_type_name: "ignition.msgs.CameraInfo"
+  direction: GZ_TO_ROS
+  lazy: false

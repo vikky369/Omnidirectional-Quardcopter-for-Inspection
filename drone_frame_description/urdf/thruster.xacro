@@ -33,7 +33,6 @@
         <frame>child</frame>
         <measure_direction>child_to_parent</measure_direction>
       </force_torque>
-      <plugin name="ignition::gazebo::systems::ForceTorque" filename="libignition-gazebo-forcetorque-system.so"/>
     </sensor>
   </gazebo>
 

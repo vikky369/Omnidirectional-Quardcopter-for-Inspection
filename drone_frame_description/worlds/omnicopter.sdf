@@ -6,23 +6,23 @@
       <max_step_size>0.001</max_step_size>
       <real_time_factor>1.0</real_time_factor>
     </physics>
-    <plugin
-      filename="ignition-gazebo-physics-system"
-      name="gz::sim::systems::Physics">
-    </plugin>
-    <plugin
-      filename="ignition-gazebo-scene-broadcaster-system"
-      name="gz::sim::systems::SceneBroadcaster">
-    </plugin>
-    <plugin
-      filename="ignition-gazebo-user-commands-system"
-      name="gz::sim::systems::UserCommands">
-    </plugin>
-    <plugin
-      filename="ignition-gazebo-sensors-system"
-      name="gz::sim::systems::Sensors">
+    <plugin filename="ignition-gazebo-physics-system" 
+      name="gz::sim::systems::Physics" />
+
+    <plugin filename="ignition-gazebo-scene-broadcaster-system" 
+      name="gz::sim::systems::SceneBroadcaster" />
+
+    <plugin filename="ignition-gazebo-user-commands-system" 
+      name="gz::sim::systems::UserCommands" />
+
+    <plugin filename="ignition-gazebo-sensors-system" name="gz::sim::systems::Sensors">
       <render_engine>ogre2</render_engine>
     </plugin>
+    <plugin name="ignition::gazebo::systems::ForceTorque" 
+      filename="libignition-gazebo-forcetorque-system.so"/>
+      
+    <plugin filename="libignition-gazebo-imu-system.so" 
+      name="ignition::gazebo::systems::Imu" />
 
     <light type="directional" name="sun">
       <cast_shadows>true</cast_shadows>
@@ -64,7 +64,6 @@
         </visual>
       </link>
     </model>
-
 
   </world>
 </sdf>
