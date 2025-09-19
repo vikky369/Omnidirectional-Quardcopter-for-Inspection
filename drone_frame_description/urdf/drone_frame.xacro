@@ -4,6 +4,10 @@
 <xacro:include filename="$(find drone_frame_description)/urdf/materials.xacro" />
 <xacro:include filename="$(find drone_frame_description)/urdf/drone_frame.gazebo" />
 
+<xacro:include filename="$(find drone_frame_description)/urdf/arm.xacro" />
+<xacro:include filename="$(find drone_frame_description)/urdf/coaxial_holder.xacro" />
+<xacro:include filename="$(find drone_frame_description)/urdf/thruster.xacro" />
+
 <link name="base_link">
   <inertial>
     <origin xyz="5.361940941515797e-15 -0.006931498212032427 1.0942736615338362e-16" rpy="0 0 0"/>
@@ -25,6 +29,35 @@
   </collision>
 </link>
 
+<!-- IMU sensor -->
+<gazebo reference="base_link">
+  <sensor name="imu_sensor" type="imu">
+    <always_on>true</always_on>
+    <update_rate>100</update_rate>
+    <visualize>true</visualize>
+    <plugin filename="libgazebo_ros_imu_sensor.so" name="imu_plugin">
+      <ros>
+        <namespace>/</namespace>
+      </ros>
+      <frame_id>base_link</frame_id>
+      <topic_name>imu</topic_name>
+      <update_rate>50</update_rate>
+    </plugin>
+    <imu>
+      <angular_velocity>
+        <x><noise type="gaussian"><mean>0.0</mean><stddev>2e-4</stddev></noise></x>
+        <y><noise type="gaussian"><mean>0.0</mean><stddev>2e-4</stddev></noise></y>
+        <z><noise type="gaussian"><mean>0.0</mean><stddev>2e-4</stddev></noise></z>
+      </angular_velocity>
+      <linear_acceleration>
+        <x><noise type="gaussian"><mean>0.0</mean><stddev>1.7e-2</stddev></noise></x>
+        <y><noise type="gaussian"><mean>0.0</mean><stddev>1.7e-2</stddev></noise></y>
+        <z><noise type="gaussian"><mean>0.0</mean><stddev>1.7e-2</stddev></noise></z>
+      </linear_acceleration>
+    </imu>
+  </sensor>
+</gazebo>
+
 <link name="controller">
   <inertial>
     <origin xyz="0.029999999999999964 0.0075 -0.08999999999999991" rpy="0 0 0"/>
@@ -44,56 +77,6 @@
       <mesh filename="file://$(find drone_frame_description)/meshes/controller_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
-  <gazebo>
-    <sensor name="imu_sensor" type="imu"> <!-- IMU Sensor -->
-      <always_on>true</always_on>
-      <update_rate>100</update_rate>
-      <visualize>true</visualize>
-      <topic>imu_data</topic>
-      <imu>
-        <angular_velocity>
-          <x>
-            <noise type="gaussian">
-              <mean>0.0</mean>
-              <stddev>2e-4</stddev>
-            </noise>
-          </x>
-          <y>
-            <noise type="gaussian">
-              <mean>0.0</mean>
-              <stddev>2e-4</stddev>
-            </noise>
-          </y>
-          <z>
-            <noise type="gaussian">
-              <mean>0.0</mean>
-              <stddev>2e-4</stddev>
-            </noise>
-          </z>
-        </angular_velocity>
-        <linear_acceleration>
-          <x>
-            <noise type="gaussian">
-              <mean>0.0</mean>
-              <stddev>1.7e-2</stddev>
-            </noise>
-          </x>
-          <y>
-            <noise type="gaussian">
-              <mean>0.0</mean>
-              <stddev>1.7e-2</stddev>
-            </noise>
-          </y>
-          <z>
-            <noise type="gaussian">
-              <mean>0.0</mean>
-              <stddev>1.7e-2</stddev>
-            </noise>
-          </z>
-        </linear_acceleration>
-      </imu>
-    </sensor>
-  </gazebo>
 </link>
 
 <joint name="controller_joint" type="fixed">
@@ -148,34 +131,73 @@
       <mesh filename="file://$(find drone_frame_description)/meshes/camera_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
-  <gazebo>
-    <sensor name="camera_front" type="camera"> <!-- Camera Sensor -->
-      <pose>0 0 0.1 0 0 0</pose> <!-- relative to base_link: x, y, z, roll, pitch, yaw -->
-      <always_on>true</always_on>
-      <topic>camera_info</topic>
-      <visualize>true</visualize>
-      <camera>
-        <horizontal_fov>1.047</horizontal_fov> <!-- ~60 degrees -->
-        <image>
-          <width>640</width>
-          <height>480</height>
-          <format>R8G8B8</format>
-        </image>
-        <clip>
-          <near>0.01</near>
-          <far>100</far>
-        </clip>
-      </camera>
-      <update_rate>30</update_rate>
-    </sensor>
-  </gazebo>
+</link>
+
+<link name="camera">
+  <inertial>
+    <mass value="0.1" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <inertia ixx="0.00001" ixy="0.0" ixz="0.0" iyy="0.00001" iyz="0.0" izz="0.00001" />
+  </inertial>
+  <visual>
+    <geometry>
+      <box size="0.05 0.05 0.05"/>
+    </geometry>
+  </visual>
+  <collision>
+    <geometry>
+      <box size="0.05 0.05 0.05"/>
+    </geometry>
+  </collision>
 </link>
 
 <joint name="camera_joint" type="fixed">
-  <origin xyz="0.0 0.0 0.15" rpy="0 0 0"/>
+  <origin xyz="0.2 0.0 0.15" rpy="0 0 0"/>
   <parent link="base_link"/>
   <child link="camera"/>
 </joint>
+
+<link name="camera_optical_frame">
+  <inertial>
+    <mass value="0.001" />
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <inertia ixx="0.00001" ixy="0.0" ixz="0.0" iyy="0.00001" iyz="0.0" izz="0.00001" />
+  </inertial>
+</link>
+
+<joint name="camera_optical_joint" type="fixed">
+  <origin xyz="0 0 0" rpy="-1.570796 0 -1.570796"/>
+  <parent link="camera"/>
+  <child link="camera_optical_frame"/>
+</joint>
+
+<gazebo reference="camera">
+  <sensor type="camera" name="camera_sensor">
+    <update_rate>30</update_rate>
+    <camera name="front_camera">
+      <horizontal_fov>1.0472</horizontal_fov>  <!-- 60 degrees in radians -->
+      <image>
+        <width>640</width>
+        <height>480</height>
+        <format>R8G8B8</format>
+      </image>
+      <clip>
+        <near>0.05</near>
+        <far>3000</far>
+      </clip>
+      <noise>
+        <type>gaussian</type>
+        <mean>0.0</mean>
+        <stddev>0.02</stddev>
+      </noise>
+    </camera>
+    <plugin name="camera_plugin" filename="libgazebo_ros_camera.so">
+      <camera_name>camera</camera_name>
+      <frame_name>camera_optical_frame</frame_name>
+      <hack_baseline>0.07</hack_baseline>
+    </plugin>
+  </sensor>
+</gazebo>
 
 <link name="battery">
   <inertial>
@@ -267,9 +289,5 @@
   <parent link="base_link"/>
   <child link="testing_probe"/>
 </joint>
-
-<xacro:include filename="$(find drone_frame_description)/urdf/arm.xacro" />
-<xacro:include filename="$(find drone_frame_description)/urdf/coaxial_holder.xacro" />
-<xacro:include filename="$(find drone_frame_description)/urdf/thruster.xacro" />
 
 </robot>

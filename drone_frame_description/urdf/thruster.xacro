@@ -65,6 +65,23 @@
 <xacro:thruster_joint prop_num="2" parent_link="motor_3" child_link="thruster_2" axis="-0.0 1.0 -0.0" y="-0.026"/>
 <xacro:thruster_joint prop_num="1" parent_link="motor_2" child_link="thruster_1" axis="0.0 1.0 0.0" y="-0.026"/>
 
+<gazebo>
+  <plugin name="thruster_tf_publisher" filename="libgazebo_ros_joint_state_publisher.so">
+    <ros>
+      <namespace>/</namespace>
+    </ros>
+    <update_rate>30</update_rate>
+    <joint_name>thruster_joint_1</joint_name>
+    <joint_name>thruster_joint_2</joint_name>
+    <joint_name>thruster_joint_3</joint_name>
+    <joint_name>thruster_joint_4</joint_name>
+    <joint_name>thruster_joint_5</joint_name>
+    <joint_name>thruster_joint_6</joint_name>
+    <joint_name>thruster_joint_7</joint_name>
+    <joint_name>thruster_joint_8</joint_name>
+  </plugin>
+</gazebo>
+
 <xacro:macro name="thruster_plugin" params="prop_num direction">
   <gazebo>
     <plugin filename="ignition-gazebo-multicopter-motor-model-system"
